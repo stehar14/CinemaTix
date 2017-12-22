@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title></title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="black">
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<!-- Page Layout here -->
+  <div class="row">
+
+    <div class="col s12 m4 l3 grey"> <!-- Note that "m4 l3" was added -->
+      <!-- Grey navigation panel
+
+            This content will be:
+        3-columns-wide on large screens,
+        4-columns-wide on medium screens,
+        12-columns-wide on small screens  -->
+      <form>
+        <span id="search">Add a new button: <input id="searchPhrase" type="text" ><input id="searchButton" value="search" type="submit"></span>
+      </form>
+
+    </div>
+
+    <div class="col s12 m8 l9 white"> <!-- Note that "m8 l9" was added -->
+      <!-- Teal page content
+      
+            This content will be:
+        9-columns-wide on large screens,
+        8-columns-wide on medium screens,
+        12-columns-wide on small screens  -->
+      <div id="movies"></div>
+    </div>
+
+  </div>  
+
+
+<!--  Scripts-->
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/app.js"></script>
+
+  </body>
+</html>
