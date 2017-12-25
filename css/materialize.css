@@ -2134,6 +2134,9 @@
 .boolean{
   font-family: Bangers;
   text-align: center;
+  border-bottom: 2px white solid;
+
+
 }
 
 .broughttoyou{
@@ -2150,7 +2153,7 @@
   font-family: Bangers;
   color: #94bfb6;
   margin-top: -10px !important;
-  margin-left: -25px !important;
+  margin-left: -30px !important;
   text-align: center !important;
   text-shadow: 5px 5px black !important;
 }
@@ -2169,8 +2172,18 @@
   margin-right: 25px !important;  
 }
 
+.icon-block:hover{
+  border-style: solid !important;
+  border-radius: 10px !important;
+  color: #990000;
+}
+
 .logodiv{
   margin-right: 90px !important;
+}
+
+.btn {
+  background-color: #990000 !important;
 }
 
 .transparent {
