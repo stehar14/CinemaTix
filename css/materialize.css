@@ -2134,9 +2134,12 @@
 .boolean{
   font-family: Bangers;
   text-align: center;
+<<<<<<< HEAD
   border-bottom: 2px white solid;
 
 
+=======
+>>>>>>> master
 }
 
 .broughttoyou{
@@ -2170,12 +2173,15 @@
   height: 60px !important;
   width: 232px !important;
   margin-right: 25px !important;  
+<<<<<<< HEAD
 }
 
 .icon-block:hover{
   border-style: solid !important;
   border-radius: 10px !important;
   color: #990000;
+=======
+>>>>>>> master
 }
 
 .logodiv{
