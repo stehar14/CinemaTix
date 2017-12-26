@@ -2134,16 +2134,9 @@
 .boolean{
   font-family: Bangers;
   text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
   border-bottom: 2px white solid;
 
 
-=======
->>>>>>> master
-=======
-  border-bottom: 2px white solid;
->>>>>>> eb1d53582e2f3b38ca0720fc945b2ee240edf9d8
 }
 
 .broughttoyou{
@@ -2177,22 +2170,12 @@
   height: 60px !important;
   width: 232px !important;
   margin-right: 25px !important;  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> eb1d53582e2f3b38ca0720fc945b2ee240edf9d8
 }
 
 .icon-block:hover{
   border-style: solid !important;
   border-radius: 10px !important;
-<<<<<<< HEAD
   color: #990000;
-=======
->>>>>>> master
-=======
-  color: 
->>>>>>> eb1d53582e2f3b38ca0720fc945b2ee240edf9d8
 }
 
 .logodiv{
