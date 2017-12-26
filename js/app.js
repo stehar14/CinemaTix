@@ -17,7 +17,7 @@ $("#searchButton").on("click", function() {
         for (i=0; i<10; i++){
           console.log(response.results[i]);
           // Creating a div to hold the movie
-          var movieDiv = $("<div class='movie'>");
+          var movieDiv = $("<div class='movie' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'>");
 
           // Storing the rating data
           var title = response.results[i].title;
