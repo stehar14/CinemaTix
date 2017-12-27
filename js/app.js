@@ -7,6 +7,7 @@ $("#searchButton").on("click", function() {
   if ($("#searchPhrase").val().trim() === "") {
     alert("That's not a valid input!");
   } else{
+    $("#movies").empty();
     var phrase = $("#searchPhrase").val().trim();
     var movieURL= "https://api.themoviedb.org/3/search/movie?api_key=ac004416c837056eac779513d15becfb&language=en-US&query=" + phrase + "&page=1&include_adult=false"
     $.ajax({
@@ -17,16 +18,23 @@ $("#searchButton").on("click", function() {
         for (i=0; i<10; i++){
           console.log(response.results[i]);
           // Creating a div to hold the movie
-          var movieDiv = $("<div class='movie' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'>");
+          var title = response.results[i].title;
+          var released = response.results[i].release_date;
+          var plot = response.results[i].overview;
+          // Retrieving the URL for the image
+          var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
 
-          // Storing the rating data
+          
+          var movieListItem = $("<li> <div class='collapsible-header movie' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'>" + response.results[i].title + "</div><div class= 'collapsible-body'><img src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p></div></li>" );
+
+          /* Storing the rating data
           var title = response.results[i].title;
 
           // Creating an element to have the rating displayed
           var pOne = $("<p>").text(title);
 
           // Displaying the rating
-          movieDiv.append(pOne);
+          movieListItem.append(pOne);
 
           // Storing the release year
           var released = response.results[i].release_date;
@@ -35,7 +43,7 @@ $("#searchButton").on("click", function() {
           var pTwo = $("<p>").text("Released: " + released);
 
           // Displaying the release year
-          movieDiv.append(pTwo);
+          movieListItem.append(pTwo);
 
           // Storing the plot
           var plot = response.results[i].overview;
@@ -44,7 +52,7 @@ $("#searchButton").on("click", function() {
           var pThree = $("<p>").text("Plot: " + plot);
 
           // Appending the plot
-          movieDiv.append(pThree);
+          movieListItem.append(pThree);
 
           // Retrieving the URL for the image
           var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
@@ -53,10 +61,10 @@ $("#searchButton").on("click", function() {
           var image = $("<img>").attr("src", imgURL);
           image.attr("class", "poster");
           // Appending the image
-          movieDiv.append(image);
+          movieListItem.append(image);*/
 
           // Putting the entire movie above the previous movies
-          $("#movies").append(movieDiv);
+          $("#movies").append(movieListItem);
         }
     });
   }
