@@ -2183,18 +2183,22 @@
 }
 
 .collapsible-header.movie{
-  background-color: white !important;
+  background-color: #990000 !important;
 
 }
 
 #movieresults{
   border-radius: 10px !important;
+  background-color: #94bfb6 !important;
 }
 
 
+#movies{
+  background-color: black !important;
+}
 
-#movies {
-  
+.accordion-head-text{
+  color: white !important;
 }
 
 .btn {
