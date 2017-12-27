@@ -2182,6 +2182,43 @@
   margin-right: 90px !important;
 }
 
+.collapsible-header.movie{
+  background-color: #990000 !important;
+  font-family: Bangers;
+
+}
+
+.collapsible-body p{
+  color: white !important;
+}
+
+#movieresults{
+  border-radius: 10px !important;
+  background-color: #990000  !important;
+
+}
+
+
+#movies{
+  background-color: black !important;
+  border-radius: 10px !important;
+}
+
+.accordion-head-text{
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+#vader{
+  background: url(../assets/images/vader.png);
+  background-position: -165px 70px;
+  background-size: 1500px;
+
+
+}
+
 .btn {
   background-color: #990000 !important;
 }
