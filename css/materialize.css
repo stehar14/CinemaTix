@@ -2182,6 +2182,21 @@
   margin-right: 90px !important;
 }
 
+.collapsible-header.movie{
+  background-color: white !important;
+
+}
+
+#movieresults{
+  border-radius: 10px !important;
+}
+
+
+
+#movies {
+  
+}
+
 .btn {
   background-color: #990000 !important;
 }
