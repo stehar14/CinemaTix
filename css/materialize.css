@@ -5836,7 +5836,7 @@ button.btn-floating {
   font-size: 1.6rem;
   display: inline-block;
   text-align: center;
-  margin-right: 1rem;
+  margin: auto;
 }
 
 .collapsible-body {

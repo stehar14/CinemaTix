@@ -1,7 +1,6 @@
 
 
 
-
 $("#searchButton").on("click", function() {
   event.preventDefault();
   if ($("#searchPhrase").val().trim() === "") {
@@ -25,7 +24,7 @@ $("#searchButton").on("click", function() {
           var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
 
           
-          var movieListItem = $("<li> <div class='collapsible-header movie' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span></div><div class= 'collapsible-body'><img src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p></div></li>" );
+          var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p></div></li>" );
 
           /* Storing the rating data
           var title = response.results[i].title;
@@ -66,6 +65,10 @@ $("#searchButton").on("click", function() {
           // Putting the entire movie above the previous movies
           $("#movies").append(movieListItem);
         }
+        $('.add-button').on('click', function(e) {
+          e.stopPropagation();
+          Materialize.toast('test', 2000);
+        });
     });
   }
 });
@@ -79,3 +82,4 @@ $("#movies").on("click", ".collapsible-header", function(){
     console.log(response);
   });
 });
+

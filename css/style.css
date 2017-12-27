@@ -5,6 +5,17 @@
  *
  * Made By MaterializeCSS.com
  */
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 nav ul a,
 nav .brand-logo {
