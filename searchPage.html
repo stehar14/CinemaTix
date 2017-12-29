@@ -3,59 +3,18 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title></title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+  <title>Search for Movies</title>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-
-
-  <!-- CSS  -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <style type="text/css">
-    .youtube {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        .youtube iframe, .youtube object, .youtube embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .youtube__img {
-            bottom: 0;
-            display: block;
-            left: 0;
-            margin: auto;
-            max-width: 100%;
-            width: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: auto;
-            cursor: pointer;
-        }
-        .youtube__play {
-            height: 72px;
-            width: 72px;
-            left: 50%;
-            top: 50%;
-            margin-left: -36px;
-            margin-top: -36px;
-            position: absolute;
-            background: url("https://i.imgur.com/TxzC70f.png") no-repeat;
-            cursor: pointer;
-        }
-  </style>
 </head>
+
 <body id="vader" class="black">
+<!-- Navbar -->
   <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
@@ -70,44 +29,28 @@
     </div>
   </nav>
 
-<!-- Page Layout here -->
+<!-- Main content -->
   <div class="row">
-
-    <div class="col s12 m4 l3 grey"> <!-- Note that "m4 l3" was added -->
-      <!-- Grey navigation panel
-
-            This content will be:
-        3-columns-wide on large screens,
-        4-columns-wide on medium screens,
-        12-columns-wide on small screens  -->
+<!-- Search -->
+    <div class="col s12 m4 l3 grey">
       <form>
         <span id="search">Add a new button: <input id="searchPhrase" type="text" ><input id="searchButton" value="search" type="submit"></span>
       </form>
-
     </div>
-    <div class="col l1"></div>
-    <div id="movieresults" class="col s12 m8 l8 grey"> <!-- Note that "m8 l9" was added -->
-      <!-- Teal page content
-      
-            This content will be:
-        9-columns-wide on large screens,
-        8-columns-wide on medium screens,
-        12-columns-wide on small screens  -->
-      <div>
+<!-- Empty div -->
+    <div class="col m1 l1"></div>
+<!-- Movie Results div -->
+    <div id="movieresults" class="col s12 m7 l8 grey">
+<!-- Collapsible list where movies will populate -->        
         <ul id="movies" class = "collapsible popout" data-collapsible = "accordion">
         </ul>
-      </div>
     </div>
-
   </div>  
 
-
 <!--  Scripts-->
-
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/app.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
   </body>
 </html>
