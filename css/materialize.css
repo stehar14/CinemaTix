@@ -2195,8 +2195,11 @@
 #movieresults{
   border-radius: 10px !important;
   background-color: #990000  !important;
+  margin-left: 20px !important;
 
 }
+
+
 
 
 #movies{
@@ -2213,10 +2216,19 @@
 
 #vader{
   background: url(../assets/images/vader.png);
-  background-position: -165px 70px;
-  background-size: 1625px;
+  background-position: -155px 60px;
+  background-size: 1630px;
 
+}
 
+#searchmovie {
+  margin-left: 25px !important;
+  margin-top: 1px !important;
+  border-radius: 10px !important;
+}
+
+.dynamic-iframe{
+  margin-left: 30px !important;
 }
 
 .btn {
@@ -2229,6 +2241,11 @@
 
 .transparent-text {
   color: transparent !important;
+}
+
+#justiceleague{
+  background-image: url(../assets/images/justiceleague.png);
+  background-position: -80px 175px !important;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
