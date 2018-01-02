@@ -5,6 +5,29 @@
  *
  * Made By MaterializeCSS.com
  */
+
+ #discover-results{
+  border-radius: 10px !important;
+    background-color: #990000 !important;
+ }
+#discover-submit {
+  margin-bottom: 10px !important;
+}
+.noUi-handle {
+  color: red;
+  margin-top: 5px !important;
+  height: 20px !important;
+}
+ .noUi-horizontal.noUi-extended {
+  padding-right: 32px;
+}
+.noUi-horizontal.noUi-extended .noUi-handle {
+  left: -1px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin  {
+  right: -32px;
+}
+
 .collapsible-header {
   display: flex;
   justify-content: space-between;
