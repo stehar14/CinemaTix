@@ -2192,6 +2192,14 @@
   color: white !important;
 }
 
+.collapsible-header{
+  background-color: #990000  !important;
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
 #movieresults{
   border-radius: 10px !important;
   background-color: #990000  !important;
@@ -2225,6 +2233,25 @@
   margin-left: 25px !important;
   margin-top: 1px !important;
   border-radius: 10px !important;
+}
+
+#profileimage{
+  margin-left: 445px !important;
+
+  
+}
+
+#usernamedisplay{
+  text-align: center !important;
+  font-family: Bangers;
+  color: white !important;
+  font-size: 100px !important;
+  border-bottom: 1px white solid !important;
+
+}
+
+#profileinfo{
+  color: white !important;
 }
 
 .btn {
