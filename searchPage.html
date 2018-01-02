@@ -15,20 +15,22 @@
 
 <body id="vader" class="black">
 <!-- Navbar -->
-  <nav class="black" role="navigation">
+  <nav class="" role="navigation">
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Profile</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
-
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
 <!-- Main content -->
   <div class="row">
 <!-- Search -->
@@ -44,6 +46,9 @@
 <!-- Collapsible list where movies will populate -->        
         <ul id="movies" class = "collapsible popout" data-collapsible = "accordion">
         </ul>
+        <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+        <a href="javascript:nextPage()" id="btn_next">Next</a>
+        page: <span id="page"></span>
     </div>
   </div>  
 

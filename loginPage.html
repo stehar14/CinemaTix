@@ -19,16 +19,19 @@
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="searchpage.html">Find Your Movie</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 <!-- Main content -->
-
   <form>
     <div>
       <input id="email" type="text" placeholder="Email...">
@@ -41,10 +44,8 @@
       <button id="sign-out">Sign Out</button>
     </div>
   </form>
-
   <!--Include firebase.js  -->
-  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-  
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>  
   <!--Configure firebase-->
   <script>
     // Visit https://console.firebase.google.com/project/<your project id>/overview and click on "Add Firebase to your web app"
@@ -56,7 +57,6 @@
     };
     firebase.initializeApp(config);
   </script>
-
   <!--Handle auth events-->
   <script>
     firebase.auth().onAuthStateChanged(function(user) {
@@ -65,8 +65,7 @@
       //  If no user, sign in anonymously with firebase.auth().signInAnonymously()
       //  If there is a user, log out out user details for debugging purposes.
     });
-  </script>
-  
+  </script>  
   <!--Handle page events-->
   <script>    
     document.querySelector('#sign-in').addEventListener('click', function(e) {
@@ -83,15 +82,12 @@
       //  If there is no current user, log in with auth.signInWithCredential(credential)
       //  If there is a current user an it's anonymous, atttempt to link the new user with firebase.auth().currentUser.link(credential) 
       //  The user link will fail if the user has already been created, so catch the error and sign in.
-    });
-    
+    });    
     document.querySelector('#sign-out').addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
       firebase.auth().signOut();
     });
   </script>
-
 </body>
-
 </html>
