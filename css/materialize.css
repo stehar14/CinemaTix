@@ -2229,6 +2229,13 @@
 
 }
 
+#searchfont{
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+
+
 #searchmovie {
   margin-left: 25px !important;
   margin-top: 1px !important;
@@ -2247,6 +2254,16 @@
   color: white !important;
   font-size: 100px !important;
   border-bottom: 1px white solid !important;
+
+}
+
+#discoverfont{
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#discover-results{
+  margin-left: 20px !important;
 
 }
 
