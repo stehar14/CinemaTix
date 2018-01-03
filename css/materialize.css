@@ -2127,136 +2127,6 @@
 .white-text {
   color: #FFFFFF !important;
 }
-/* THIS NEEDS 
-  TO BE MOVED 
-  INTO OUR 
-  STYLE.CSS FILE */
-.boolean{
-  font-family: Bangers;
-  text-align: center;
-  border-bottom: 2px white solid;
-
-
-}
-
-.broughttoyou{
-  font-family: Bangers;
-  text-align: center;
-}
-
-.thetitle{
-  font-family: Bangers;
-  text-align: center;
-}
-
-.titlefont{
-  font-family: Bangers;
-  color: #94bfb6;
-  margin-top: -10px !important;
-  margin-left: -30px !important;
-  text-align: center !important;
-  text-shadow: 5px 5px black !important;
-}
-
-.allinone{
-  font-family: Bangers;
-  color: #94bfb6;
-  margin-top: -20px !important;
-  margin-left: -20px !important;
-  text-shadow: 2px 2px black !important;
-}
-
-.ourlogo{
-  height: 60px !important;
-  width: 232px !important;
-  margin-right: 25px !important;  
-}
-
-.icon-block:hover{
-  border-style: solid !important;
-  border-radius: 10px !important;
-  color: #990000;
-}
-
-.logodiv{
-  margin-right: 90px !important;
-}
-
-.collapsible-header.movie{
-  background-color: #990000 !important;
-  font-family: Bangers;
-
-}
-
-.collapsible-body p{
-  color: white !important;
-}
-
-.collapsible-header{
-  background-color: #990000  !important;
-  font-family: Bangers !important;
-  font-size: 20px !important;
-  color: white !important;
-  text-shadow: 2px 2px black !important;
-}
-
-#movieresults{
-  border-radius: 10px !important;
-  background-color: #990000  !important;
-  margin-left: 20px !important;
-
-}
-
-
-
-
-#movies{
-  background-color: black !important;
-  border-radius: 10px !important;
-}
-
-.accordion-head-text{
-  font-family: Bangers !important;
-  font-size: 20px !important;
-  color: white !important;
-  text-shadow: 2px 2px black !important;
-}
-
-#vader{
-  background: url(../assets/images/vader.png);
-  background-position: -155px 60px;
-  background-size: 1630px;
-
-}
-
-#searchmovie {
-  margin-left: 25px !important;
-  margin-top: 1px !important;
-  border-radius: 10px !important;
-}
-
-#profileimage{
-  margin-left: 445px !important;
-
-  
-}
-
-#usernamedisplay{
-  text-align: center !important;
-  font-family: Bangers;
-  color: white !important;
-  font-size: 100px !important;
-  border-bottom: 1px white solid !important;
-
-}
-
-#profileinfo{
-  color: white !important;
-}
-
-.btn {
-  background-color: #990000 !important;
-}
 
 .transparent {
   background-color: transparent !important;
@@ -2266,10 +2136,7 @@
   color: transparent !important;
 }
 
-#justiceleague{
-  background-image: url(../assets/images/justiceleague.png);
-  background-position: -80px 175px !important;
-}
+
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
