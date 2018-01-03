@@ -12,6 +12,7 @@ $("#searchButton").on("click", function() {
   if ($("#searchPhrase").val().trim() === "") {
     alert("That's not a valid input!");
   } else{
+    $("#discover-results").show();
   // Removes any previous movie entries from the #movies div   
     $("#movies").empty();
   // Creates a query URL including user search phrase  
