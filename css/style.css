@@ -5,6 +5,22 @@
  *
  * Made By MaterializeCSS.com
  */
+.tabs {
+  margin-bottom: 10px;
+  background-color: rgba(220,20,60,0.5) !important;
+} 
+
+.tab {
+  color: rgba(0,0,0,1) !important;
+}
+
+#slider-snap-value-lower,
+#slider-snap-value-upper {
+  margin-top: 10px;
+}
+#rel-year {
+  margin-bottom: 10px;
+}
 #searchmovie {
   background-color: rgba(220,20,60,0.5) !important;
 }
