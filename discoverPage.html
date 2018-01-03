@@ -36,54 +36,75 @@
 <!-- Main content -->
   <div class="row">
 <!-- Discover -->
-    <div id="searchmovie" class="col s12 m4 l3 white">
+    <div id="searchmovie" class="col s12 m4 offset-m4 l3 offset-l3">
       <h3 id="discoverfont">Discover Movies</h3>
 <!-- Sort by -->
-      <div class="input-field col s12">
-        <select id="sort">
-          <option value="" disabled selected>Choose one</option>
-          <option value="popularity.asc">Least popular</option>
-          <option value="popularity.desc">Most popular</option>
-          <option value="release_date.asc">Release date (ascending)</option>
-          <option value="release_date.desc">Release date (descending)</option>
-          <option value="original_title.asc">Alphabetical order (A-Z)</option>
-          <option value="original_title.desc">Alphabetical order (Z-A)</option>
-        </select>
-        <label>Sort by</label>
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s6"><a href="#search">Search</a></li>
+          <li class="tab col s6"><a class="active" href="#discover">Discover</a></li>
+        </ul>
       </div>
-<!-- Genre -->           
-      <div class="input-field col s12">
-        <select multiple id="genre">
-          <option value="" disabled selected>Choose any</option>
-          <option value="28">Action</option>
-          <option value="35">Comedy</option>
-          <option value="99">Documentary</option>
-          <option value="27">Horror</option>
-          <option value="10749">Romance</option>
-          <option value="878">Science Fiction</option>
-          <option value="53">Thriller</option>
-        </select>
-        <label>Genre</label>
-      </div>
-<!-- Release Year -->
-      <label class="col sm10 center">Release Year</label>   
-      <div class="col s10 offset-s1" id="slider-snap"></div>
-      <div class="col s10 offset-s1">
-        <span class="left" id="slider-snap-value-lower"></span>
-        <span class="right" id="slider-snap-value-upper"></span>
-      </div>
-      <br>
-      <br>
-<!-- Keyword -->
-      <div class="input-field col s12">
-        <input placeholder="(optional)" id="actor" type="text">
-        <label for="actor">Actor</label>
-      </div>
+      <div id="search" class="col s12">
+        <div class="input-field col s12">
+          <label>Search term</label>
+          <input placeholder="Enter your search" id="searchPhrase" type="text">
 <!-- Submit button -->
-      <button id="discover-submit" class="btn waves-effect waves-light col s6 offset-s3" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
+          <button id="searchButton" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
+          <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+      <div id="discover" class="col s12">
+        <div class="input-field col s12 white-text">
+          <select id="sort">
+            <option value="" disabled selected>Choose one</option>
+            <option value="popularity.asc">Least popular</option>
+            <option value="popularity.desc">Most popular</option>
+            <option value="release_date.asc">Release date (ascending)</option>
+            <option value="release_date.desc">Release date (descending)</option>
+            <option value="original_title.asc">Alphabetical order (A-Z)</option>
+            <option value="original_title.desc">Alphabetical order (Z-A)</option>
+          </select>
+          <label>Sort by</label>
+        </div>
+  <!-- Genre -->           
+        <div class="input-field col s12 white-text">
+          <select multiple id="genre">
+            <option value="" disabled selected>Choose any</option>
+            <option value="28">Action</option>
+            <option value="35">Comedy</option>
+            <option value="99">Documentary</option>
+            <option value="27">Horror</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="53">Thriller</option>
+          </select>
+          <label>Genre</label>
+        </div>
+  <!-- Release Year -->
+        <label class="col sm10 center">Release Year</label>   
+        <div class="col s10 offset-s1" id="slider-snap"></div>
+        <div class="col s10 offset-s1">
+          <span class="left white-text" id="slider-snap-value-lower"></span>
+          <span class="right white-text" id="slider-snap-value-upper"></span>
+        </div>
+        <br>
+        <br>
+  <!-- Keyword -->
+        <div class="input-field col s12">
+          <input placeholder="(optional)" id="actor" type="text">
+          <label for="actor">Actor</label>
+        </div>
+  <!-- Submit button -->
+        <button id="discover-submit" class="btn waves-effect waves-light col s6 offset-s3" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+
     </div>
+
+      
 <!-- Empty div -->
     <div class="col m1 l1"></div>
 <!-- Movie Results div -->

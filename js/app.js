@@ -1,6 +1,9 @@
 // CinemaTix Site
 // Project 1
 
+$(document).ready(function() {
+  $('#discover-results').hide();
+});
 // On click event listener for #searchButton on searchPage.html 
 $("#searchButton").on("click", function() {
   // Prevents page reload
@@ -65,10 +68,13 @@ $("#movies").on("click", ".collapsible-header", function(){
 $("#discover-submit").on("click", function() {
   // Prevents page reload
   event.preventDefault();
+  $('#discover-results').show();
   // Removes any previous movie entries from the #movies list   
   $("#movies").empty();
 // Creates variables to hold user inputs from discover search 
   var actor = $("#actor").val().trim();
+ 
+
   var actorURL = "https://api.themoviedb.org/3/search/person?api_key=ac004416c837056eac779513d15becfb&query=" + actor;
   $.ajax({
     url: actorURL,
