@@ -11,6 +11,7 @@ function search() {
     alert("That's not a valid input!");
   } else{
   // Show discover results div
+    $(".page").text(page);
     $("#discover-results").show();
     $("#search-change").show();
     $("#discover-change").hide();
@@ -50,6 +51,7 @@ function search() {
 }
 // Global discover function
 function discover() {
+  $(".page").text(page);
   $('#discover-results').show();
   $("#search-change").hide();
   $("#discover-change").show();
