@@ -18,6 +18,14 @@
   margin-top: 50px;
   background-color: rgba(220,20,60,0.5) !important;
 }
+
+#register-button{
+  margin-bottom: 15px !important;
+}
+
+.height1{
+  margin-top: 200px !important;
+}
  /* Discover Page */
 
   /* search/discover input field div */
@@ -121,8 +129,8 @@
 
 #vader{
   background: url(../assets/images/vader.png);
-  background-position: -155px 60px;
-  background-size: 1630px;
+  background-position: -120px 60px;
+  background-size: cover;
 }
 
 #discoverfont,
@@ -242,12 +250,28 @@ footer.page-footer {
 
 /* Profile page */
 
+
+#profileimagebackground{
+  background-image: url(../assets/images/profilebackground.jpg);
+
+}
+ 
+
+
+#imagebox{
+  background-image: url(../assets/images/profilebackground.jpg);
+  background-position: -150px -100px !important;
+
+
+}
+
 #usernamedisplay{
+  background-image: url(../assets/images/profilebackground.jpg);
   text-align: center !important;
   font-family: Bangers;
   color: white !important;
   font-size: 100px !important;
-  border-bottom: 1px white solid !important;
+  border-bottom: 1px #990000 solid !important;
 }
 
 #profileinfo{
@@ -262,6 +286,23 @@ footer.page-footer {
   background-image: url(../assets/images/justiceleague.png);
   background-position: -80px 175px !important;
 }
+
+#profileinformation{
+  margin-bottom: 10px !important;
+  text-align: center !important;
+}
+
+#emailused ,
+#datejoined{
+  font-family: Bangers;
+  font-size: 25px !important;
+  color: white !important;
+}
+
+#profileboxes{
+  color: #0066cc !important;
+}
+
 
 /* Media Queries */
 /* 601px <= Screen <= 992px  */
