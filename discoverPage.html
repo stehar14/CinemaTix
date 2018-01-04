@@ -20,9 +20,9 @@
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="discoverPage.html">Discover Movies</a></li>
-        <li><a href="reg.html">Sign In</a></li>
+        <li><a class="white-text" href="profile.html">Profile</a></li>
+        <li><a class="white-text" href="discoverPage.html">Discover Movies</a></li>
+        <li><a class="white-text" href="reg.html">Sign In</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
         <li><a href="profile.html">Profile</a></li>
@@ -40,8 +40,8 @@
 <!-- Sort by -->
       <div class="col s12">
         <ul class="tabs white-text">
-          <li class="tab col s6"><a class="active" href="#search">Search</a></li>
-          <li class="tab col s6"><a href="#discover">Discover</a></li>
+          <li class="tab col s6"><a class="active white-text" href="#search">Search</a></li>
+          <li class="tab col s6"><a class="white-text" href="#discover">Discover</a></li>
         </ul>
       </div>
       <div id="search" class="col s12">
@@ -111,9 +111,16 @@
 <!-- Collapsible list where movies will populate -->        
         <ul id="movies" class = "collapsible popout" data-collapsible = "accordion">
         </ul>
-        <a href="javascript:prevPage()" id="btn_prev">Prev</a>
-        <a href="javascript:nextPage()" id="btn_next">Next</a>
-        page: <span id="page"></span>
+        <div id="search-change">
+          <a href="" id="search_btn_prev">Prev</a>
+          <a href="" id="search_btn_next">Next</a>
+          page: <span id="page"></span>
+        </div>
+        <div id="discover-change">
+          <a href="" id="discover_btn_prev">Prev</a>
+          <a href="" id="discover_btn_next">Next</a>
+          page: <span id="page"></span>
+        </div>
     </div>
   </div>  
 
