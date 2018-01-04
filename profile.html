@@ -10,41 +10,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-  <!-- nav -->
-    <nav class="black" role="navigation">
+  <!-- Navbar -->
+  <nav class="" role="navigation">
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="searchPage.html">Search for a Movie</a></li>
-        <li><a href="discoverpage.html">Discover Movies</a></li>
+        <li><a class="white-text" href="profile.html">Profile</a></li>
+        <li><a class="white-text" href="discoverPage.html">Discover Movies</a></li>
+        <li><a class="white-text" href="reg.html">Sign In</a></li>
       </ul>
-
       <ul id="nav-mobile" class="side-nav">
-
-        <li><a href="searchPage.html">Search for a Movie</a></li>
-        <li><a href="discoverpage.html">Discover Movies</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="reg.html">Sign In</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -52,16 +51,11 @@
   <!-- profile image section -->
   <div id="usernamedisplay" class="black col s12">Profile Name Here</div>
 
-     <div class="col s12 m8 offset-m2 l6 offset-l3">
+     <div class="col s12">
         <div class="card-panel black lighten-5 z-depth-1">
           <div id="imagebox" class="black row valign-wrapper">
-            <div class="col s6">
+            <div class="col s6 offset-s3">
               <img id="profileimage" class="circle responsive-img" src="assets/images/redhood.jpg">
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                
-              </span>
             </div>
           </div>
         </div>
