@@ -5,6 +5,22 @@
  *
  * Made By MaterializeCSS.com
  */
+
+/* Register */
+#justice {
+  background-image: url("../assets/images/justiceleague.jpg");
+  background-size: cover;
+  background-color: transparent;
+  height: 100vh;
+}
+
+#register {
+  margin-top: 50px;
+  background-color: rgba(220,20,60,0.5) !important;
+}
+ /* Discover Page */
+
+  /* search/discover input field div */
 .tabs {
   margin-bottom: 10px;
   background-color: rgba(220,20,60,0.5) !important;
@@ -21,30 +37,38 @@
 #rel-year {
   margin-bottom: 10px;
 }
+
 #searchmovie {
   background-color: rgba(220,20,60,0.5) !important;
 }
- #discover-results{
-  border-radius: 10px !important;
-    background-color: rgba(220,20,60,0.5) !important;
- }
+
 #discover-submit,
 #searchButton {
   margin-bottom: 10px !important;
 }
+
 .noUi-handle {
   color: red;
   margin-top: 5px !important;
   height: 20px !important;
 }
- .noUi-horizontal.noUi-extended {
+
+.noUi-horizontal.noUi-extended {
   padding-right: 32px;
 }
+
 .noUi-horizontal.noUi-extended .noUi-handle {
   left: -1px;
 }
+
 .noUi-horizontal.noUi-extended .noUi-origin  {
   right: -32px;
+}
+
+  /* Results div on discover page */
+#discover-results{
+  border-radius: 10px !important;
+  background-color: rgba(220,20,60,0.5) !important;
 }
 
 .collapsible-header {
@@ -59,6 +83,70 @@
   align-items: center;
 }
 
+.collapsible-header.movie{
+  background-color: rgba(220,20,60,0.5) !important;
+  font-family: Bangers;
+
+}
+
+.collapsible-body p{
+  color: white !important;
+}
+
+.collapsible-header{
+  background-color: #990000  !important;
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+#movieresults{
+  border-radius: 10px !important;
+  background-color: #990000  !important;
+  margin-left: 20px !important;
+}
+
+#movies{
+  background-color: black !important;
+  border-radius: 10px !important;
+}
+
+.accordion-head-text{
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+#vader{
+  background: url(../assets/images/vader.png);
+  background-position: -155px 60px;
+  background-size: 1630px;
+}
+
+#discoverfont,
+#regtext {
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#discover-results{
+  margin-left: 20px !important;
+}
+
+#searchfont{
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#searchmovie {
+  margin-left: 25px !important;
+  margin-top: 1px !important;
+  border-radius: 10px !important;
+}
+
+/* Navbar */
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -72,53 +160,47 @@ p {
   color: #26a69a;
 }
 
+/* Index page */
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+.parallax-container .section {
+  width: 100%;
 }
 
 .icon-block {
   padding: 0 15px;
+  border: solid !important;
+  border-radius: 10px !important;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
+}
+
+.icon-block:hover{
+  border-style: solid !important;
+  border-radius: 10px !important;
+  color: #990000;
 }
 
 footer.page-footer {
   margin: 0;
 }
 
-/* THIS NEEDS 
-  TO BE MOVED 
-  INTO OUR 
-  STYLE.CSS FILE */
+#footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
 .boolean{
   font-family: Bangers;
   text-align: center;
   border-bottom: 2px red solid;
-
-
 }
 
 .broughttoyou{
@@ -154,80 +236,13 @@ footer.page-footer {
   margin-right: 25px !important;  
 }
 
-.icon-block:hover{
-  border-style: solid !important;
-  border-radius: 10px !important;
-  color: #990000;
-}
-
 .logodiv{
   margin-right: 90px !important;
 }
 
-.collapsible-header.movie{
-  background-color: rgba(220,20,60,0.5) !important;
-  font-family: Bangers;
-
-}
-
-.collapsible-body p{
-  color: white !important;
-}
-
-.collapsible-header{
-  background-color: #990000  !important;
-  font-family: Bangers !important;
-  font-size: 20px !important;
-  color: white !important;
-  text-shadow: 2px 2px black !important;
-}
-
-#movieresults{
-  border-radius: 10px !important;
-  background-color: #990000  !important;
-  margin-left: 20px !important;
-
-}
-
-
-
-
-#movies{
-  background-color: black !important;
-  border-radius: 10px !important;
-}
-
-.accordion-head-text{
-  font-family: Bangers !important;
-  font-size: 20px !important;
-  color: white !important;
-  text-shadow: 2px 2px black !important;
-}
-
-#vader{
-  background: url(../assets/images/vader.png);
-  background-position: -155px 60px;
-  background-size: 1630px;
-
-}
-
-#searchfont{
-  font-family: Bangers;
-  text-align: center !important;
-}
-
-
-
-#searchmovie {
-  margin-left: 25px !important;
-  margin-top: 1px !important;
-  border-radius: 10px !important;
-}
-
+/* Profile page */
 #profileimage{
-  margin-left: 445px !important;
-
-  
+  margin-left: 445px !important; 
 }
 
 #usernamedisplay{
@@ -236,17 +251,6 @@ footer.page-footer {
   color: white !important;
   font-size: 100px !important;
   border-bottom: 1px white solid !important;
-
-}
-
-#discoverfont{
-  font-family: Bangers;
-  text-align: center !important;
-}
-
-#discover-results{
-  margin-left: 20px !important;
-
 }
 
 #profileinfo{
@@ -256,7 +260,28 @@ footer.page-footer {
 .btn {
   background-color: #990000 !important;
 }
+
 #justiceleague{
   background-image: url(../assets/images/justiceleague.png);
   background-position: -80px 175px !important;
+}
+
+/* Media Queries */
+/* 601px <= Screen <= 992px  */
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+/* Screen <= 600px */
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
 }
