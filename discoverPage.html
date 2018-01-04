@@ -105,7 +105,17 @@
 
       
 <!-- Empty div -->
-    <div class="col m1 l1"></div>
+    <div class="col m1 l1">
+      <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Oops!</h4>
+            <p>You need to enter in a valid search term!</p>
+          </div>
+          <div class="modal-footer">
+            <a id="modal-close" class="modal-action modal-close waves-effect waves-red btn-flat">Okay</a>
+          </div>
+        </div>
+    </div>
 <!-- Movie Results div -->
     <div id="discover-results" class="col s12 m7 l8 grey">
 <!-- Collapsible list where movies will populate -->        
@@ -124,7 +134,7 @@
     </div>
   </div>  
 
-<!--  Scripts-->
+<!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/nouislider.js"></script>

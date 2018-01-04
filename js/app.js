@@ -3,14 +3,14 @@
 
 // Global variable to store page value for query urls
 var page;
-
+// Global variable to hold response from ajax 
 var res;
 // Global search function
 function search() {
   if ($("#searchPhrase").val().trim() === "") {
-    alert("That's not a valid input!");
+    $("#modal1").show();
   } else{
-  // Show discover results div
+  // Update page text, show discover results div, show search next/prev, hide discover next/prev
     $(".page").text(page);
     $("#discover-results").show();
     $("#search-change").show();
@@ -51,6 +51,7 @@ function search() {
 }
 // Global discover function
 function discover() {
+  // Update page text, show discover results div, show discover next/prev, hide search next/prev
   $(".page").text(page);
   $('#discover-results').show();
   $("#search-change").hide();
@@ -59,6 +60,7 @@ function discover() {
   $("#movies").empty();
 // Creates variables to hold user inputs from discover search 
   var actor = $("#actor").val().trim();
+// If there is no actor input
   if (actor === "") {  
     var sort = $("#sort").val();
     var genre = $("#genre").val();
@@ -103,6 +105,7 @@ function discover() {
       });
     });
   } else {
+// Else there is actor input
     var actorURL = "https://api.themoviedb.org/3/search/person?api_key=ac004416c837056eac779513d15becfb&query=" + actor;
     $.ajax({
       url: actorURL,
@@ -168,7 +171,6 @@ $("#searchButton").on("click", function() {
   // Prevents page reload
   event.preventDefault();
   page=1;
-  // Makes sure that the text box is populated when user clicks submit
   search();
 });
 
@@ -177,7 +179,7 @@ $("#search_btn_prev").on("click", function() {
   event.preventDefault();
   if (page > 1) {
     page=page-1;
-    // Makes sure that the text box is populated when user clicks submit
+
     search();
   }
 });
@@ -187,7 +189,6 @@ $("#search_btn_next").on("click", function() {
   event.preventDefault();
   if (page < res.total_pages) {
     page=page+1;
-  // Makes sure that the text box is populated when user clicks submit
     search();
   }
 });
@@ -223,7 +224,7 @@ $("#discover_btn_prev").on("click", function() {
   event.preventDefault();
   if (page > 1) {
     page=page-1;
-    // Makes sure that the text box is populated when user clicks submit
+
     discover();
   }
 });
@@ -233,7 +234,10 @@ $("#discover_btn_next").on("click", function() {
   event.preventDefault();
   if (page < res.total_pages) {
     page=page+1;
-  // Makes sure that the text box is populated when user clicks submit
     discover();
   }
+});
+
+$("#modal-close").on("click", function () {
+  $("#modal1").hide();
 });
