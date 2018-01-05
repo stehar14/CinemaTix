@@ -80,7 +80,11 @@ $("#sign-in").on("click", e =>
      console.log(e.message);
      $("#error-msg").text(e.message);
       $("#modal2").show();
-   });
+   })
+   .then(e =>
+    {
+      window.location.href="profile.html";
+    });
 });
 
 // Sign-out button
@@ -101,7 +105,10 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
 
     if (firebaseUser.emailVerified)
   {
-    console.log('Email is verified');
+    console.log("email verified");
+    getUsername();
+    getJoinDate();
+    getEmail();
   }
   else
   {
