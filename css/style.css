@@ -336,5 +336,15 @@ footer .page-footer {
   #index-banner .section {
     top: 0;
   }
+
+  .our-logo {
+    height: 50px !important;
+    width: 232px !important;
+    margin-right: 25px !important;  
+  }
+
+  #register-form {
+    width: 90vw;
+  }
 }
 
