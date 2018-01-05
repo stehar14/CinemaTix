@@ -7,11 +7,24 @@
  */
 
 /* Register */
+  
+  /* Background image & logo */
 #justice {
   background-image: url("../assets/images/justiceleague.jpg");
   background-size: cover;
+  background-position: center;
   background-color: transparent;
-  height: 100vh;
+  height: 130vh;
+}
+
+.height1 {
+  margin-top: 200px !important;
+}
+
+  /* Register form */
+#regtext {
+  font-family: Bangers;
+  text-align: center !important;
 }
 
 #register-form {
@@ -23,31 +36,27 @@
   margin-bottom: 15px !important;
 }
 
-#register-button{
-  margin-bottom: 15px !important;
-}
-
-.height1{
-  margin-top: 200px !important;
-}
-
-#register{
-  margin-bottom: 5px !important;
+#register {
   float: right !important;
-
 }
 
-#sign-in{
-  margin-bottom: 10px !important;
+#sign-in {
   margin-left: -5px !important;
 }
 
-#sign-out{
-  margin-bottom: 10px !important;
+#sign-out {
   margin-left: 115px !important;
 }
- /* Discover Page */
 
+/* Discover Page */
+
+  /* Background image */
+#vader {
+  background: url(../assets/images/vader.png);
+  background-position: -120px 60px;
+  background-size: cover;
+}
+  
   /* search/discover input field div */
 .tabs {
   margin-bottom: 10px;
@@ -62,16 +71,19 @@
 #slider-snap-value-upper {
   margin-top: 10px;
 }
+
 #rel-year {
   margin-bottom: 10px;
 }
 
-#searchmovie {
+#search-movie {
   background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 50px;
+  border-radius: 10px !important;
 }
 
 #discover-submit,
-#searchButton {
+#search-button {
   margin-bottom: 10px !important;
 }
 
@@ -89,45 +101,22 @@
   left: -1px;
 }
 
-.noUi-horizontal.noUi-extended .noUi-origin  {
+.noUi-horizontal.noUi-extended .noUi-origin {
   right: -32px;
 }
 
   /* Results div on discover page */
-#discover-results{
+#discover-results {
   border-radius: 10px !important;
   background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 20px !important;
 }
 
 .collapsible-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.add-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.collapsible-header.movie{
-  background-color: rgba(220,20,60,0.5) !important;
-  font-family: Bangers;
-
-}
-
-.collapsible-body p{
-  color: white !important;
-}
-
-.ticket-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.collapsible-header{
+  border-radius: 10px !important;
   background-color: #990000  !important;
   font-family: Bangers !important;
   font-size: 20px !important;
@@ -135,15 +124,9 @@
   text-shadow: 2px 2px black !important;
 }
 
-#movieresults{
-  border-radius: 10px !important;
-  background-color: #990000  !important;
-  margin-left: 20px !important;
-}
-
-#movies{
-  background-color: black !important;
-  border-radius: 10px !important;
+.collapsible-header .movie {
+  background-color: rgba(220,20,60,0.5) !important;
+  font-family: Bangers;
 }
 
 .accordion-head-text{
@@ -153,47 +136,45 @@
   text-shadow: 2px 2px black !important;
 }
 
-#vader{
-  background: url(../assets/images/vader.png);
-  background-position: -120px 60px;
-  background-size: cover;
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.collapsible-body p {
+  color: white !important;
 }
 
-#discoverfont,
-#regtext {
-  font-family: Bangers;
-  text-align: center !important;
+.ticket-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#discover-results{
-  margin-left: 20px !important;
-}
-
-#searchfont{
-  font-family: Bangers;
-  text-align: center !important;
-}
-
-#searchmovie {
-  margin-left: 25px !important;
-  margin-top: 1px !important;
+#movies {
+  background-color: black !important;
   border-radius: 10px !important;
 }
 
-#search-change{
+#discover-font {
+  font-family: Bangers;
   text-align: center !important;
 }
 
-.page{
+#discover-change,
+#search-change {
+  text-align: center !important;
+}
+
+.page {
   font-family: Bangers;
 }
 
-#search_btn_prev{
-font-family: Bangers;
-margin-right: 5px !important;
-}
-
-#search_btn_next{
+#discover-btn-prev,
+#discover-btn-next,
+#search_btn_prev,
+#search_btn_next {
   font-family: Bangers;
   margin-left: 5px !important;
 }
@@ -241,7 +222,7 @@ p {
   color: #990000;
 }
 
-footer.page-footer {
+footer .page-footer {
   margin: 0;
 }
 
@@ -250,23 +231,23 @@ footer.page-footer {
   justify-content: center;
 }
 
-.boolean{
+.boolean {
   font-family: Bangers;
   text-align: center;
   border-bottom: 2px red solid;
 }
 
-.broughttoyou{
+.brought-to-you {
   font-family: Bangers;
   text-align: center;
 }
 
-.thetitle{
+.the-title {
   font-family: Bangers;
   text-align: center;
 }
 
-.titlefont{
+.title-font {
   font-family: Bangers;
   color: #94bfb6;
   margin-top: -10px !important;
@@ -275,7 +256,7 @@ footer.page-footer {
   text-shadow: 5px 5px black !important;
 }
 
-.allinone{
+.all-in-one {
   font-family: Bangers;
   color: #94bfb6;
   margin-top: -20px !important;
@@ -283,36 +264,27 @@ footer.page-footer {
   text-shadow: 2px 2px black !important;
 }
 
-.ourlogo{
+.our-logo {
   height: 60px !important;
   width: 232px !important;
   margin-right: 25px !important;  
 }
 
-.logodiv{
-  margin-right: 90px !important;
-}
-
 /* Profile page */
-
-
-#profileimagebackground{
+#profile-image-background {
   background-image: url(../assets/images/profilebackground.jpg);
-
 }
  
 .card .card-content .card-plot {
   color: black !important;
 }
 
-#imagebox{
-  background-image: url(../assets/images/profilebackground.jpg);
-  background-position: -150px -100px !important;
-
-
+.card .card-image .card-title {
+  font-family: Bangers;
+  text-shadow: 2px 2px black !important;
 }
 
-#usernamedisplay{
+#username-display {
   background-image: url(../assets/images/profilebackground.jpg);
   text-align: center !important;
   font-family: Bangers;
@@ -321,7 +293,7 @@ footer.page-footer {
   border-bottom: 1px #990000 solid !important;
 }
 
-#profileinfo{
+#profile-info {
   color: white !important;
 }
 
@@ -329,24 +301,19 @@ footer.page-footer {
   background-color: #990000 !important;
 }
 
-#justiceleague{
-  background-image: url(../assets/images/justiceleague.png);
-  background-position: -80px 175px !important;
-}
-
-#profileinformation{
+#profile-information {
   margin-bottom: 10px !important;
   text-align: center !important;
 }
 
-#emailused ,
-#datejoined{
+#email-used,
+#date-joined {
   font-family: Bangers;
   font-size: 25px !important;
   color: white !important;
 }
 
-#profileboxes{
+#profile-boxes {
   color: #0066cc !important;
 }
 
@@ -370,3 +337,4 @@ footer.page-footer {
     top: 0;
   }
 }
+
