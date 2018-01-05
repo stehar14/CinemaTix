@@ -3,66 +3,91 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Discover Movies</title>
+  <title>CinemaTix Sign In</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" type="text/css" href="css/nouislider.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
 </head>
 
 <body>
-  <!-- Navbar -->
+<!-- Navbar -->
   <nav class="" role="navigation">
     <div class="nav-wrapper container">
       <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="white-text" href="profile.html">Profile</a></li>
-        <li><a class="white-text" href="discoverPage.html">Discover Movies</a></li>
-        <li><a class="white-text" href="reg.html">Sign In</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="discoverPage.html">Discover Movies</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="profile.html">Profile</a></li>
+        <li><a href="searchPage.html">Search for a Movie</a></li>
         <li><a href="discoverPage.html">Discover Movies</a></li>
-        <li><a href="reg.html">Sign In</a></li>
+        <li><a href="loginPage.html">Sign In</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 <!-- Main content -->
-<div id="justice">
-<div class="row">
-  <div id="register" class="col s4 offset-s4">
-  <h3 id="regtext" class="white-text">Register</h3>
-    <div class="input-field col s12">
-      <label>Display Name</label>
-      <input placeholder="JamesBond007" id="display-name" type="text">
+  <div id="justice">
+    <div class="row">
+      <div id="modal2" class="modal col s4 offset-s8">
+        <div class="modal-content">
+          <h4>Oops!</h4>
+          <p id="error-msg">You need to enter in a valid search term!</p>
+        </div>
+        <div class="modal-footer">
+          <a id="modal-close" class="modal-action modal-close waves-effect waves-red btn-flat">Okay</a>
+        </div>
+      </div>
+      <div id="register-form" class="col s4 offset-s4">
+        
+        <h3 id="regtext" class="white-text">Register</h3>
+        <div class="input-field col s12">
+          <label>Display Name</label>
+          <input placeholder="JamesBond007" id="display-name" type="text">
+        </div>
+        <div class="input-field col s12">
+          <label>Email</label>
+          <input placeholder="james.bond@mi6.org" id="email" type="email">
+        </div>
+        <div class="input-field col s12">
+          <label>Password</label>
+          <input placeholder="At least six characters" id="password" type="password">
+        </div>
+    <!-- Submit button -->
+        <button id="register" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Register
+          <i class="material-icons right">send</i>
+        </button>
+        <button id="sign-in" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Sign In
+          <i class="material-icons right">send</i>
+        </button>
+        <button id="sign-out" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Sign Out
+          <i class="material-icons right">send</i>
+        </button>
+      </div>  
     </div>
-    <div class="input-field col s12">
-      <label>Email</label>
-      <input placeholder="james.bond@mi6.org" id="display-name" type="email">
+    <div class="height1">
+      <img src="assets/images/bblogo.png" width=167px>
     </div>
-    <div class="input-field col s12">
-      <label>Password</label>
-      <input placeholder="At least six characters" id="display-name" type="password">
-    </div>
-<!-- Submit button -->
-    <button id="register-button" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
-      <i class="material-icons right">send</i>
-    </button>
   </div>
-</div>
-<div class="height1">
-  <img src="assets/images/bblogo.png" width=167px>
-</div>
-</div>
-  <!--  Scripts-->
+
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/app.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+  <script type="text/javascript" src="js/firebaseUsers.js"></script>
+  <script type="text/javascript" src="js/userData.js"></script>
 </body>
 </html>
