@@ -30,6 +30,22 @@
 .height1{
   margin-top: 200px !important;
 }
+
+#register{
+  margin-bottom: 5px !important;
+  float: right !important;
+
+}
+
+#sign-in{
+  margin-bottom: 10px !important;
+  margin-left: -5px !important;
+}
+
+#sign-out{
+  margin-bottom: 10px !important;
+  margin-left: 115px !important;
+}
  /* Discover Page */
 
   /* search/discover input field div */
@@ -164,6 +180,25 @@
   border-radius: 10px !important;
 }
 
+#search-change{
+  text-align: center !important;
+}
+
+.page{
+  font-family: Bangers;
+}
+
+#search_btn_prev{
+font-family: Bangers;
+margin-right: 5px !important;
+}
+
+#search_btn_next{
+  font-family: Bangers;
+  margin-left: 5px !important;
+}
+
+
 /* Navbar */
 nav ul a,
 nav .brand-logo {
@@ -266,7 +301,9 @@ footer.page-footer {
 
 }
  
-
+.card .card-content .card-plot {
+  color: black !important;
+}
 
 #imagebox{
   background-image: url(../assets/images/profilebackground.jpg);

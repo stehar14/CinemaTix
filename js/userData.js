@@ -163,11 +163,35 @@ function addMovie(movieId, callback)
 
 function getMovieList()
 {
-  thisUserRef = database.ref("users/" + userId);
-  thisUserRef.once("value", function(snapshot)
-  {
-    console.log(snapshot.val().movies);
-  });
+  var userId = firebase.auth().currentUser.uid;
+  var rootRef = database.ref();
+  var urlRef = rootRef.child("users/" + userId + "/movies");
+  urlRef.on("child_added", function(snapshot) {
+    
+      cardURL= "https://api.themoviedb.org/3/movie/" + snapshot.val().id + "?api_key=ac004416c837056eac779513d15becfb&language=en-US";
+
+      $.ajax({
+        url: cardURL,
+        method: "GET"
+      }).done(function(response) {
+        res=response;
+        console.log(response);
+        console.log(cardURL);
+      // Creating variables to hold response data
+        var title = response.title;
+        var released = response.release_date;
+        var plot = response.overview;
+      // Retrieving the URL for the image
+        var imgURL = "https://image.tmdb.org/t/p/w185/" + response.poster_path;
+      // Creating a list item for collapsible list #movies
+        var movieCard = $("<div class='col s12 m2'><div class='card'><div class='card-image'><img src='" + imgURL + "'><span class='card-title'>" + title + "</span><a class='delete btn-floating halfway-fab waves-effect waves-light red'><i class='material-icons'>cancel</i></a></div><div class='card-content black'><p>Release: " + response.release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>Tickets?</a></div></div></div>");
+
+        // Putting the moiveListItem below the previous movies
+        $("#profileinfo").append(movieCard);
+      // If you click on the add button on a header, don't show/hide collapsible body
+    
+      });  
+    });
 }
 
 function getJoinDate()

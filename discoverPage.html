@@ -14,6 +14,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
 </head>
 
 <body id="vader" class="black">
@@ -49,7 +53,7 @@
       <div id="search" class="col s12">
         <div class="input-field col s12">
           <label>Search term</label>
-          <input placeholder="Enter your search" id="searchPhrase" type="text">
+          <input class="white-text" placeholder="Enter your search" id="searchPhrase" type="text">
 <!-- Submit button -->
           <button id="searchButton" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
           <i class="material-icons right">send</i>
@@ -94,7 +98,7 @@
         <br>
   <!-- Keyword -->
         <div class="input-field col s12">
-          <input placeholder="(optional)" id="actor" type="text">
+          <input class="white-text" placeholder="(optional)" id="actor" type="text">
           <label for="actor">Actor</label>
         </div>
   <!-- Submit button -->
@@ -125,13 +129,13 @@
         </ul>
         <div id="search-change">
           <a href="" id="search_btn_prev">Prev</a>
+          PAGE: <span class="page"></span>
           <a href="" id="search_btn_next">Next</a>
-          page: <span class="page"></span>
         </div>
         <div id="discover-change">
           <a href="" id="discover_btn_prev">Prev</a>
           <a href="" id="discover_btn_next">Next</a>
-          page: <span class="page"></span>
+          PAGE: <span class="page"></span>
         </div>
     </div>
   </div>  
@@ -144,10 +148,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/app.js"></script>
   <script src="js/discSlider.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
-  <script src="js/userData.js"></script>
+  <script type="text/javascript" src="js/userData.js"></script>
 </body>
 </html>
