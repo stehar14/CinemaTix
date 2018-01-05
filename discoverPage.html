@@ -24,50 +24,54 @@
 <!-- Navbar -->
   <nav class="" role="navigation">
     <div class="nav-wrapper container">
-      <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
+      <a href="index.html"> <img class="our-logo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
         <li><a class="white-text" href="profile.html">Profile</a></li>
         <li><a class="white-text" href="discoverPage.html">Discover Movies</a></li>
-        <li><a class="white-text" href="reg.html">Sign In</a></li>
+        <li><a class="white-text" href="reg.html">Account</a></li>
       </ul>
+<!-- Mobile Nav -->
       <ul id="nav-mobile" class="side-nav">
         <li><a href="profile.html">Profile</a></li>
         <li><a href="discoverPage.html">Discover Movies</a></li>
-        <li><a href="reg.html">Sign In</a></li>
+        <li><a href="reg.html">Account</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 <!-- Main content -->
   <div class="row">
-<!-- Discover -->
-    <div id="searchmovie" class="col s12 m4 offset-m4 l3 offset-l3">
-      <h3 class="white-text" id="discoverfont">Discover Movies</h3>
-<!-- Sort by -->
+<!-- Search/Discover Forms -->
+    <div id="search-movie" class="col s12 m4 l3">
+      <h3 class="white-text" id="discover-font">Discover Movies</h3>
+<!-- Search/Discover Tabs -->
       <div class="col s12">
         <ul class="tabs white-text">
           <li class="tab col s6"><a class="active white-text" href="#search">Search</a></li>
           <li class="tab col s6"><a class="white-text" href="#discover">Discover</a></li>
         </ul>
       </div>
+<!-- Search Form -->
       <div id="search" class="col s12">
         <div class="input-field col s12">
           <label>Search term</label>
-          <input class="white-text" placeholder="Enter your search" id="searchPhrase" type="text">
-<!-- Submit button -->
-          <button id="searchButton" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
+          <input class="white-text" placeholder="Enter your search" id="search-phrase" type="text">
+<!-- Search button -->
+          <button id="search-button" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Submit
           <i class="material-icons right">send</i>
           </button>
         </div>
       </div>
+<!-- Discover Form -->
       <div id="discover" class="col s12">
         <div class="input-field col s12 white-text">
+<!-- Sort by -->          
           <select id="sort">
             <option value="" disabled selected>Choose one</option>
-            <option value="popularity.asc">Least popular</option>
             <option value="popularity.desc">Most popular</option>
-            <option value="release_date.asc">Release date (ascending)</option>
-            <option value="release_date.desc">Release date (descending)</option>
+            <option value="popularity.asc">Least popular</option>
+            <option value="release_date.asc">Oldest</option>
+            <option value="release_date.desc">Newest</option>
             <option value="original_title.asc">Alphabetical order (A-Z)</option>
             <option value="original_title.desc">Alphabetical order (Z-A)</option>
           </select>
@@ -96,21 +100,20 @@
         </div>
         <br>
         <br>
-  <!-- Keyword -->
+  <!-- With Actor -->
         <div class="input-field col s12">
           <input class="white-text" placeholder="(optional)" id="actor" type="text">
           <label for="actor">Actor</label>
         </div>
-  <!-- Submit button -->
+  <!-- Discover button -->
         <button id="discover-submit" class="btn waves-effect waves-light col s6 offset-s3" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
         </button>
       </div>
-
     </div>
 
       
-<!-- Empty div -->
+<!-- Spacer div with modal content -->
     <div class="col m1 l1">
       <div id="modal1" class="modal">
         <div class="modal-content">
@@ -127,14 +130,16 @@
 <!-- Collapsible list where movies will populate -->        
         <ul id="movies" class = "collapsible popout" data-collapsible = "accordion">
         </ul>
+<!-- Next/Prev?Current page # for search results -->
         <div id="search-change">
-          <a href="" id="search_btn_prev">Prev</a>
+          <a href="" id="search-btn-prev">Prev</a>
           PAGE: <span class="page"></span>
-          <a href="" id="search_btn_next">Next</a>
+          <a href="" id="search-btn-next">Next</a>
         </div>
+<!-- Next/Prev?Current page # for discover results -->
         <div id="discover-change">
-          <a href="" id="discover_btn_prev">Prev</a>
-          <a href="" id="discover_btn_next">Next</a>
+          <a href="" id="discover-btn-prev">Prev</a>
+          <a href="" id="discover-btn-next">Next</a>
           PAGE: <span class="page"></span>
         </div>
     </div>
