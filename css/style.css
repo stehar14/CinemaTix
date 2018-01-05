@@ -19,6 +19,10 @@
   background-color: rgba(220,20,60,0.5) !important;
 }
 
+#register-form button {
+  margin-bottom: 15px !important;
+}
+
 #register-button{
   margin-bottom: 15px !important;
 }
@@ -128,7 +132,7 @@
 
 .accordion-head-text{
   font-family: Bangers !important;
-  font-size: 20px !important;
+  font-size: 30px !important;
   color: white !important;
   text-shadow: 2px 2px black !important;
 }

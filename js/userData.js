@@ -26,10 +26,31 @@ function getMovieList()
 function getJoinDate()
 {
 	var userId = firebase.auth().currentUser.uid;
+	console.log(userId);
+	thisUserRef = database.ref("users/" + userId);
+	thisUserRef.once("value", function(snapshot)
+	{
+		console.log(snapshot.val().joinDate);
+		$("#datejoined").html(snapshot.val().joinDate);
+	});
 }
 
 function getUsername()
 {
-	
+	var userId = firebase.auth().currentUser.uid;
+	console.log(userId);
+	thisUserRef = database.ref("users/" + userId);
+	thisUserRef.once("value", function(snapshot)
+	{
+		console.log(snapshot.val().username);
+		$("#usernamedisplay").html(snapshot.val().username);
+	});
+}
+
+function getEmail()
+{
+	var email = firebase.auth().currentUser.email;
+	console.log(email);
+	$("#emailused").html(email);
 }
 
