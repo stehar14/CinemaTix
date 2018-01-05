@@ -44,7 +44,10 @@ function search() {
         // If you click on the add button on a header, don't show/hide collapsible body
         $('.add-button').on('click', function(e) {
           e.stopPropagation();
-          Materialize.toast('test', 2000);
+          Materialize.toast('Added!', 2000);
+          var movieNum = $(this).attr("firebaseId");
+          addMovie(movieNum);
+          console.log(movieNum);
         });
     });
   }
@@ -101,7 +104,10 @@ function discover() {
     // If you click on the add button on a header, don't show/hide collapsible body
       $('.add-button').on('click', function(e) {
         e.stopPropagation();
-        Materialize.toast('test', 2000);
+        Materialize.toast('Added!', 2000);
+        var movieNum = $(this).attr("firebaseId");
+        addMovie(movieNum);
+        console.log(movieNum);
       });
     });
   } else {
@@ -154,7 +160,10 @@ function discover() {
       // If you click on the add button on a header, don't show/hide collapsible body
         $('.add-button').on('click', function(e) {
           e.stopPropagation();
-          Materialize.toast('test', 2000);
+          Materialize.toast('Added!', 2000);
+          var movieNum = $(this).attr("firebaseId");
+          addMovie(movieNum);
+          console.log(movieNum);
         });
       });
     });
@@ -241,4 +250,13 @@ $("#discover_btn_next").on("click", function() {
 $("#modal-close").on("click", function () {
   $("#modal1").hide();
   $("#modal2").hide();
+});
+
+$("#my-movies").on("click", function() {
+  getMovieList();
+});
+
+$('#profileinfo').on('click', ".delete", function(e) {
+  e.stopPropagation();
+  Materialize.toast('test', 2000);
 });
