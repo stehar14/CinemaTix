@@ -6,26 +6,81 @@
  * Made By MaterializeCSS.com
  */
 
- #discover-results{
-  border-radius: 10px !important;
-    background-color: #990000 !important;
- }
-#discover-submit {
+/* Register */
+#justice {
+  background-image: url("../assets/images/justiceleague.jpg");
+  background-size: cover;
+  background-color: transparent;
+  height: 100vh;
+}
+
+#register-form {
+  margin-top: 50px;
+  background-color: rgba(220,20,60,0.5) !important;
+}
+
+#register-form button {
+  margin-bottom: 15px !important;
+}
+
+#register-button{
+  margin-bottom: 15px !important;
+}
+
+.height1{
+  margin-top: 200px !important;
+}
+ /* Discover Page */
+
+  /* search/discover input field div */
+.tabs {
+  margin-bottom: 10px;
+  background-color: rgba(220,20,60,0.5) !important;
+} 
+
+.tab {
+  color: rgba(0,0,0,1) !important;
+}
+
+#slider-snap-value-lower,
+#slider-snap-value-upper {
+  margin-top: 10px;
+}
+#rel-year {
+  margin-bottom: 10px;
+}
+
+#searchmovie {
+  background-color: rgba(220,20,60,0.5) !important;
+}
+
+#discover-submit,
+#searchButton {
   margin-bottom: 10px !important;
 }
+
 .noUi-handle {
   color: red;
   margin-top: 5px !important;
   height: 20px !important;
 }
- .noUi-horizontal.noUi-extended {
+
+.noUi-horizontal.noUi-extended {
   padding-right: 32px;
 }
+
 .noUi-horizontal.noUi-extended .noUi-handle {
   left: -1px;
 }
+
 .noUi-horizontal.noUi-extended .noUi-origin  {
   right: -32px;
+}
+
+  /* Results div on discover page */
+#discover-results{
+  border-radius: 10px !important;
+  background-color: rgba(220,20,60,0.5) !important;
 }
 
 .collapsible-header {
@@ -40,6 +95,76 @@
   align-items: center;
 }
 
+.collapsible-header.movie{
+  background-color: rgba(220,20,60,0.5) !important;
+  font-family: Bangers;
+
+}
+
+.collapsible-body p{
+  color: white !important;
+}
+
+.ticket-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapsible-header{
+  background-color: #990000  !important;
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+#movieresults{
+  border-radius: 10px !important;
+  background-color: #990000  !important;
+  margin-left: 20px !important;
+}
+
+#movies{
+  background-color: black !important;
+  border-radius: 10px !important;
+}
+
+.accordion-head-text{
+  font-family: Bangers !important;
+  font-size: 30px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+#vader{
+  background: url(../assets/images/vader.png);
+  background-position: -120px 60px;
+  background-size: cover;
+}
+
+#discoverfont,
+#regtext {
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#discover-results{
+  margin-left: 20px !important;
+}
+
+#searchfont{
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#searchmovie {
+  margin-left: 25px !important;
+  margin-top: 1px !important;
+  border-radius: 10px !important;
+}
+
+/* Navbar */
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -53,15 +178,144 @@ p {
   color: #26a69a;
 }
 
+/* Index page */
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+  border: solid !important;
+  border-radius: 10px !important;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.icon-block:hover{
+  border-style: solid !important;
+  border-radius: 10px !important;
+  color: #990000;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.boolean{
+  font-family: Bangers;
+  text-align: center;
+  border-bottom: 2px red solid;
+}
+
+.broughttoyou{
+  font-family: Bangers;
+  text-align: center;
+}
+
+.thetitle{
+  font-family: Bangers;
+  text-align: center;
+}
+
+.titlefont{
+  font-family: Bangers;
+  color: #94bfb6;
+  margin-top: -10px !important;
+  margin-left: -30px !important;
+  text-align: center !important;
+  text-shadow: 5px 5px black !important;
+}
+
+.allinone{
+  font-family: Bangers;
+  color: #94bfb6;
+  margin-top: -20px !important;
+  margin-left: -20px !important;
+  text-shadow: 2px 2px black !important;
+}
+
+.ourlogo{
+  height: 60px !important;
+  width: 232px !important;
+  margin-right: 25px !important;  
+}
+
+.logodiv{
+  margin-right: 90px !important;
+}
+
+/* Profile page */
+
+
+#profileimagebackground{
+  background-image: url(../assets/images/profilebackground.jpg);
+
+}
+ 
+
+
+#imagebox{
+  background-image: url(../assets/images/profilebackground.jpg);
+  background-position: -150px -100px !important;
+
+
+}
+
+#usernamedisplay{
+  background-image: url(../assets/images/profilebackground.jpg);
+  text-align: center !important;
+  font-family: Bangers;
+  color: white !important;
+  font-size: 100px !important;
+  border-bottom: 1px #990000 solid !important;
+}
+
+#profileinfo{
+  color: white !important;
+}
+
+.btn {
+  background-color: #990000 !important;
+}
+
+#justiceleague{
+  background-image: url(../assets/images/justiceleague.png);
+  background-position: -80px 175px !important;
+}
+
+#profileinformation{
+  margin-bottom: 10px !important;
+  text-align: center !important;
+}
+
+#emailused ,
+#datejoined{
+  font-family: Bangers;
+  font-size: 25px !important;
+  color: white !important;
+}
+
+#profileboxes{
+  color: #0066cc !important;
+}
+
+
+/* Media Queries */
+/* 601px <= Screen <= 992px  */
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -73,19 +327,9 @@ p {
   }
 }
 
+/* Screen <= 600px */
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
 }
