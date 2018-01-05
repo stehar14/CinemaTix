@@ -10,6 +10,7 @@ var config =
 };
 firebase.initializeApp(config);
 
+var database = firebase.database();
 var userId;
 
 //Register button
@@ -21,7 +22,8 @@ $("#register").on("click", e =>
   // Make reference variables for the email and password entered on the page
   const txtEmail = document.getElementById("email");
   const txtPassword = document.getElementById("password");
-
+  const txtDisplay = document.getElementById("display-name");
+  const display = txtDisplay.value;
   const email = txtEmail.value;
   const password = txtPassword.value;
   const auth = firebase.auth();
@@ -35,13 +37,25 @@ $("#register").on("click", e =>
       {
         console.log(e.message)
         $("#error-msg").text(e.message);
-     	$("#error-msg").show();
+        $("#modal2").show();
       })
     .then(e =>
-	{
-	  var user = auth.currentUser;
+  {
+    var curser = auth.currentUser;
+    curser.sendEmailVerification().then(e =>
+    {
+      // Email sent.
+      console.log("Email sent.");
+    }).catch(e =>
+    {
+      // An error happened.
+      console.log(e.message);
+      $("#error-msg").text(e.message);
+      $("#modal2").show();
+    });
 
-	  createUserData(user.uid, "username");
+    createUserData(curser.uid, display);
+
    });
 });
 
@@ -68,16 +82,19 @@ $("#sign-in").on("click", e =>
    {
      console.log(e.message);
      $("#error-msg").text(e.message);
-     $("#error-msg").show();
-   });
+      $("#modal2").show();
+   })
+   .then(e =>
+    {
+      window.location.href="profile.html";
+    });
 });
 
 // Sign-out button
 $("#sign-out").on("click", e =>
 {
-  	firebase.auth().signOut();
+    firebase.auth().signOut();
 });
-
 // Realtime listener
 firebase.auth().onAuthStateChanged(firebaseUser =>
 {
@@ -89,6 +106,21 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
     $("#sign-out").show();
 
     userId = firebase.auth().currentUser.uid;
+
+    if (firebaseUser.emailVerified)
+  {
+    console.log("email verified");
+    getUsername();
+    getJoinDate();
+    getEmail();
+  }
+  else
+  {
+    $("#error-msg").text("Please verify your email address by clicking the link in the email we sent you!");
+    $("#modal2").show();
+    console.log('Email is not verified');
+  }
+  
   }
   else
   {
@@ -99,57 +131,64 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
   }
 });
 
-var database = firebase.database();
-var userRef = database.ref().child("users/");
+var userRef = database.ref("users/");
 
 function createUserData(id, username)
 {
 	userRef.child(id).set(
 	{
 		username: username,
-		movies: [],
+		movies: {},
 		joinDate: moment().format("MM/DD/YYYY")
 	});
 }
 
-function addMovie(movieId)
+function addMovie(movieId, callback)
 {
-	var userId = firebase.auth().currentUser.uid;
-	
+	thisUserRef = database.ref("users/" + userId);
+  var moviesRef = thisUserRef.child("movies");
+  var newMoviesRef = moviesRef.push();
+  id = newMoviesRef.name;
+  newMoviesRef.set({
+      id: movieId
+  });
+
+  console.log("Movie added");
+
+  thisUserRef.once("value", function(snapshot)
+  {
+    console.log(snapshot.val().movies);
+  });
 }
 
 function getMovieList()
 {
+  thisUserRef = database.ref("users/" + userId);
+  thisUserRef.once("value", function(snapshot)
+  {
+    console.log(snapshot.val().movies);
+  });
+}
 
 function getJoinDate()
 {
-	var userId = firebase.auth().currentUser.uid;
 	console.log(userId);
 	thisUserRef = database.ref("users/" + userId);
 	thisUserRef.once("value", function(snapshot)
 	{
 		console.log(snapshot.val().joinDate);
 		$("#datejoined").html(snapshot.val().joinDate);
+  });
 }
 
 function getUsername()
 {
-	var username;
-	database.ref("users/" + userId).once("child_added", function(snapshot)
-	{
-		username = snapshot.val().username;
-	});
-}
-
-console.log("Username: " + getUsername());
-	var userId = firebase.auth().currentUser.uid;
-	console.log(userId);
 	thisUserRef = database.ref("users/" + userId);
-	thisUserRef.once("value", function(snapshot)
-	{
-		console.log(snapshot.val().username);
-		$("#usernamedisplay").html(snapshot.val().username);
-	});
+  thisUserRef.once("value", function(snapshot)
+  {
+    console.log(snapshot.val().username);
+    $("#usernamedisplay").html(snapshot.val().username);
+  });
 }
 
 function getEmail()

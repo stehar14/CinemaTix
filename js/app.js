@@ -44,7 +44,8 @@ function search() {
         // If you click on the add button on a header, don't show/hide collapsible body
         $('.add-button').on('click', function(e) {
           e.stopPropagation();
-          Materialize.toast('test', 2000);
+          Materialize.toast("Added!", 1000);
+          addMovie(this.getAttribute('firebaseId'));
         });
     });
   }
@@ -101,7 +102,8 @@ function discover() {
     // If you click on the add button on a header, don't show/hide collapsible body
       $('.add-button').on('click', function(e) {
         e.stopPropagation();
-        Materialize.toast('test', 2000);
+        Materialize.toast("Added!", 1000);
+        addMovie(this.getAttribute('firebaseId'));
       });
     });
   } else {
@@ -154,7 +156,8 @@ function discover() {
       // If you click on the add button on a header, don't show/hide collapsible body
         $('.add-button').on('click', function(e) {
           e.stopPropagation();
-          Materialize.toast('test', 2000);
+          Materialize.toast("Added!", 1000);
+          addMovie(this.getAttribute('firebaseId'));
         });
       });
     });
