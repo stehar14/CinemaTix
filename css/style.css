@@ -266,7 +266,9 @@ footer.page-footer {
 
 }
  
-
+.card .card-content .card-plot {
+  color: black !important;
+}
 
 #imagebox{
   background-image: url(../assets/images/profilebackground.jpg);
