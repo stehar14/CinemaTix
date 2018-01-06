@@ -1,0 +1,376 @@
+/* CinemaTix Site
+ Project 1 */
+
+/* Register */
+  
+  /* Background image & logo */
+#justice {
+  background-image: url("../assets/images/justiceleague.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  height: 130vh;
+}
+
+.height1 {
+  margin-top: 200px !important;
+}
+
+  /* Register form */
+#reg-text {
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#register-form {
+  margin-top: 50px;
+  background-color: rgba(220,20,60,0.5) !important;
+}
+
+#register-form button {
+  margin-bottom: 15px !important;
+}
+
+#register {
+  float: right !important;
+}
+
+#sign-in {
+  margin-left: -5px !important;
+}
+
+#sign-out {
+  margin-left: 115px !important;
+}
+
+/* Discover Page */
+
+  /* Background image */
+#vader {
+  background: url(../assets/images/vader.png);
+  background-position: -120px 60px;
+  background-size: cover;
+}
+  
+  /* search/discover input field div */
+.tabs {
+  margin-bottom: 10px;
+  background-color: rgba(220,20,60,0.5) !important;
+} 
+
+.tab {
+  color: rgba(0,0,0,1) !important;
+}
+
+#slider-snap-value-lower,
+#slider-snap-value-upper {
+  margin-top: 10px;
+}
+
+#rel-year {
+  margin-bottom: 10px;
+}
+
+#search-movie {
+  background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 50px;
+  border-radius: 10px !important;
+}
+
+#discover-submit,
+#search-button {
+  margin-bottom: 10px !important;
+}
+
+.noUi-handle {
+  color: red;
+  margin-top: 5px !important;
+  height: 20px !important;
+}
+
+.noUi-horizontal.noUi-extended {
+  padding-right: 32px;
+}
+
+.noUi-horizontal.noUi-extended .noUi-handle {
+  left: -1px;
+}
+
+.noUi-horizontal.noUi-extended .noUi-origin {
+  right: -32px;
+}
+
+  /* Results div on discover page */
+#discover-results {
+  border-radius: 10px !important;
+  background-color: rgba(220,20,60,0.5) !important;
+  margin-left: 20px !important;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px !important;
+  background-color: #990000  !important;
+  font-family: Bangers !important;
+  font-size: 20px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+.collapsible-header .movie {
+  background-color: rgba(220,20,60,0.5) !important;
+  font-family: Bangers;
+}
+
+.accordion-head-text{
+  font-family: Bangers !important;
+  font-size: 30px !important;
+  color: white !important;
+  text-shadow: 2px 2px black !important;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.collapsible-body p {
+  color: white !important;
+}
+
+.ticket-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#movies {
+  background-color: black !important;
+  border-radius: 10px !important;
+}
+
+#discover-font {
+  font-family: Bangers;
+  text-align: center !important;
+}
+
+#discover-change,
+#search-change {
+  text-align: center !important;
+}
+
+.page {
+  font-family: Bangers;
+}
+
+#discover-btn-prev,
+#discover-btn-next,
+#search_btn_prev,
+#search_btn_next {
+  font-family: Bangers;
+  margin-left: 5px !important;
+}
+
+
+/* Navbar */
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+/* Index page */
+
+#big-t {
+  font-size: 5.7rem;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+  border: solid !important;
+  border-radius: 10px !important;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.icon-block:hover{
+  border-style: solid !important;
+  border-radius: 10px !important;
+  color: #990000;
+}
+
+footer .page-footer {
+  margin: 0;
+}
+
+#footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.boolean {
+  font-family: Bangers;
+  text-align: center;
+  border-bottom: 2px red solid;
+}
+
+.brought-to-you {
+  font-family: Bangers;
+  text-align: center;
+}
+
+.the-title {
+  font-family: Bangers;
+  text-align: center;
+}
+
+.title-font {
+  font-family: Bangers;
+  color: #94bfb6;
+  margin-top: -10px !important;
+  margin-left: -30px !important;
+  text-align: center !important;
+  text-shadow: 5px 5px black !important;
+}
+
+.all-in-one {
+  font-family: Bangers;
+  color: #94bfb6;
+  margin-top: -20px !important;
+  margin-left: -20px !important;
+  text-shadow: 2px 2px black !important;
+}
+
+.our-logo {
+  height: 60px !important;
+  width: 232px !important;
+  margin-right: 25px !important;  
+}
+
+/* Profile page */
+#profile-image-background {
+  background-image: url(../assets/images/profilebackground.jpg);
+}
+ 
+.card .card-content .card-plot {
+  color: black !important;
+}
+
+.card .card-image .card-title {
+  font-family: Bangers;
+  text-shadow: 2px 2px black !important;
+}
+
+#username-display {
+  background-image: url(../assets/images/profilebackground.jpg);
+  text-align: center !important;
+  font-family: Bangers;
+  color: white !important;
+  font-size: 100px !important;
+  border-bottom: 1px #990000 solid !important;
+}
+
+#profile-info {
+  color: white !important;
+}
+
+.btn {
+  background-color: #990000 !important;
+}
+
+#profile-information {
+  margin-bottom: 10px !important;
+  text-align: center !important;
+}
+
+#email-used,
+#date-joined {
+  font-family: Bangers;
+  font-size: 25px !important;
+  color: white !important;
+}
+
+#profile-boxes {
+  color: #0066cc !important;
+}
+
+
+/* Media Queries */
+/* 601px <= Screen <= 992px  */
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  
+  #search-movie,
+  #register-form {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+  
+  .my-card {
+    width: 22vw !important;
+  }
+
+  #discover-results{
+    width: 100vw;
+  }
+}
+
+/* Screen <= 600px */
+@media only screen and (max-width : 620px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  .our-logo {
+    height: 50px !important;
+    width: 232px !important;
+    margin-right: 25px !important;  
+  }
+
+  #register-form {
+    width: 90vw;
+  }
+
+  #search-movie {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+
+  .my-card {
+    width: 85vw !important;
+  }
+
+  #username-display {
+    font-size: 50px !important;
+  }
+}
