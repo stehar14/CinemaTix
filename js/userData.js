@@ -30,15 +30,15 @@ $("#register").on("click", e =>
   const email = txtEmail.value;
   const password = txtPassword.value;
   const auth = firebase.auth();
-  console.log("Email: " + email);
-  console.log("Password: " + password);
+ // console.log("Email: " + email);
+ // console.log("Password: " + password);
 // Create promise to create new user using email and password
   const promise = auth.createUserWithEmailAndPassword(email, password);
   promise
   // Display error in modal    
     .catch(e => 
       {
-        console.log(e.message)
+       // console.log(e.message)
         $("#error-msg").text(e.message);
         $("#modal2").show();
       })
@@ -49,11 +49,11 @@ $("#register").on("click", e =>
     curser.sendEmailVerification().then(e =>
     {
       // Email sent.
-      console.log("Email sent.");
+     // console.log("Email sent.");
     }).catch(e =>
     {
       // An error happened.
-      console.log(e.message);
+     // console.log(e.message);
       $("#error-msg").text(e.message);
       $("#modal2").show();
     });
@@ -75,25 +75,23 @@ $("#sign-in").on("click", e =>
   const email = txtEmail.value;
   const password = txtPassword.value;
   const auth = firebase.auth();
-  console.log("Email: " + email);
-  console.log("Password: " + password);
+ // console.log("Email: " + email);
+ // console.log("Password: " + password);
 // Create promise to sign user in using the email and password entered
   const promise = auth.signInWithEmailAndPassword(email, password);
   promise
   .catch(e => 
    {
   // Display error in modal
-     console.log(e.message);
+    // console.log(e.message);
+    
      $("#error-msg").text(e.message);
       $("#modal2").show();
+    
    })
   // After successful sign in, redirect to profile page
-   .then(e =>
-    {
-      window.location.href="profile.html";
-    });
+  
 });
-
 // On click event listener for Sign-out button on reg page
 $("#sign-out").on("click", e =>
 {
@@ -106,7 +104,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
 // If a user is logged in, hide register and sign in buttons, display sign out
   if(firebaseUser)
   {
-    console.log(firebaseUser);
+   // console.log(firebaseUser);
     $("#register").hide();
     $("#sign-in").hide();
     $("#sign-out").show();
@@ -115,7 +113,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
   //If the signed in user verified their email, allow them to access their profile features
     if (firebaseUser.emailVerified)
   {
-    console.log("email verified");
+   // console.log("email verified");
     getUsername();
     getJoinDate();
     getEmail();
@@ -125,14 +123,14 @@ firebase.auth().onAuthStateChanged(firebaseUser =>
   // Otherwise show modal indicating their email needs to be verified
     $("#error-msg").text("Please verify your email address by clicking the link in the email we sent you!");
     $("#modal2").show();
-    console.log('Email is not verified');
+   // console.log('Email is not verified');
   }
   
   }
 // Otherwise, show register and sign in button, and hide sign out button  
   else
   {
-    console.log("Not logged in.");
+   // console.log("Not logged in.");
     $("#register").show();
     $("#sign-in").show();
     $("#sign-out").hide();
@@ -158,7 +156,7 @@ function addMovie(movieId)
 {
   var alreadyListed = false;
 	thisUserRef = database.ref("users/" + userId);
-  var moviesRef = thisUserRef.child("movies");
+  var moviesRef = thisUserRef.child("/movies");
   moviesRef.once("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot){
       var childKey = childSnapshot.key;
@@ -182,13 +180,13 @@ function addMovie(movieId)
 
   thisUserRef.once("value", function(snapshot)
   {
-    console.log(snapshot.val().movies);
+   // console.log(snapshot.val().movies);
   });
 }
 
 function deleteMovie(movieId) {
   thisUserRef = database.ref("users/" + userId);
-  var moviesRef = thisUserRef.child("movies");
+  var moviesRef = thisUserRef.child("/movies");
   moviesRef.orderByChild('id').equalTo(movieId)
     .once('value').then(function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
@@ -215,8 +213,8 @@ function getMovieList()
       method: "GET"
     }).done(function(response) {
       res=response;
-      console.log(response);
-      console.log(cardURL);
+     // console.log(response);
+     // console.log(cardURL);
     // Creating variables to hold response data
       var title = response.title;
       var released = response.release_date;
@@ -234,11 +232,11 @@ function getMovieList()
 // Function to display join date on profile page
 function getJoinDate()
 {
-	console.log(userId);
+//	console.log(userId);
 	thisUserRef = database.ref("users/" + userId);
 	thisUserRef.once("value", function(snapshot)
 	{
-		console.log(snapshot.val().joinDate);
+	//	console.log(snapshot.val().joinDate);
 		$("#date-joined").html("Member since: " + snapshot.val().joinDate);
   });
 }
@@ -249,7 +247,7 @@ function getUsername()
 	thisUserRef = database.ref("users/" + userId);
   thisUserRef.once("value", function(snapshot)
   {
-    console.log(snapshot.val().username);
+   // console.log(snapshot.val().username);
     $("#username-display").html(snapshot.val().username);
     $("#display-name").attr("placeholder", snapshot.val().username);
   });
@@ -259,7 +257,7 @@ function getUsername()
 function getEmail()
 {
 	var email = firebase.auth().currentUser.email;
-	console.log(email);
+//	console.log(email);
 	$("#email-used").html(email);
   $("#email").attr("placeholder", email);
 }

@@ -35,27 +35,31 @@ function search() {
     }).done(function(response) {
       res = response;
     // For loop to create collapsible elements (max 20 if the results page is full) and append to the #movies ul
-      for (i=0; i<response.results.length; i++){
-        console.log(response.results[i]);
-      // Creating variables to hold response data
-        var title = response.results[i].title;
-        var released = response.results[i].release_date;
-        var plot = response.results[i].overview;
-      // Retrieving the URL for the image
-        var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
-      // Creating a list item for collapsible list #movies
-        var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
-      // Putting the moiveListItem below the previous movies
-        $("#movies").append(movieListItem);
+      if (response.results.length !== 0) {
+        for (i=0; i<response.results.length; i++){
+          // console.log(response.results[i]);
+        // Creating variables to hold response data
+          var title = response.results[i].title;
+          var released = response.results[i].release_date;
+          var plot = response.results[i].overview;
+        // Retrieving the URL for the image
+          var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
+        // Creating a list item for collapsible list #movies
+          var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
+        // Putting the moiveListItem below the previous movies
+          $("#movies").append(movieListItem);
+        }
+      } else {
+        var nothing = $("<li> <div class='collapsible-header movie center'><span class='accordion-head-text'>Sorry!</span></div><div class= 'collapsible-body'><p>There are no movies that match your search. Please try a different search.</p></div></li>")
+        $("#movies").append(nothing);
       }
-    
     // If you click on the add button on a header, don't show/hide collapsible body
     // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
       $('.add-button').on('click', function(e) {
         e.stopPropagation()
         var movieNum = $(this).attr("firebase-id");
         addMovie(movieNum);
-        console.log(movieNum);
+        // console.log(movieNum);
       });
     });
   }
@@ -79,11 +83,11 @@ function discover() {
     var years = snapSlider.noUiSlider.get();
     var lowYear = years[0];
     var highYear = years[1];
-    console.log(actor);
-    console.log(sort);
-    console.log(genre);
-    console.log(lowYear);
-    console.log(highYear);
+    // console.log(actor);
+    // console.log(sort);
+    // console.log(genre);
+    // console.log(lowYear);
+    // console.log(highYear);
   // Creates query URL based on user inputs
     var movieURL= "https://api.themoviedb.org/3/discover/movie?api_key=ac004416c837056eac779513d15becfb&original_language=en-US&sort_by=" + sort + "&release_date.gte=" + lowYear + "&release_date.lte=" + highYear + "&with_genres=" + genre + "&page=" + page + "&include_adult=false"
   // AJAX call to get data from TMDB using query URL  
@@ -92,22 +96,27 @@ function discover() {
       method: "GET"
     }).done(function(response) {
       res=response;
-      console.log(response);
-      console.log(movieURL);
+      // console.log(response);
+      // console.log(movieURL);
     // For loop to create collapsible elements (max 20 if the results page is full) and append to the #movies ul
-      for (i=0; i<response.results.length; i++){
-        console.log(response.results[i]);
-      // Creating variables to hold response data
-        var title = response.results[i].title;
-        var released = response.results[i].release_date;
-        var plot = response.results[i].overview;
-      // Retrieving the URL for the image
-        var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
-      // Creating a list item for collapsible list #movies
-        var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
+      if (response.results.length !== 0) {  
+        for (i=0; i<response.results.length; i++){
+          // console.log(response.results[i]);
+        // Creating variables to hold response data
+          var title = response.results[i].title;
+          var released = response.results[i].release_date;
+          var plot = response.results[i].overview;
+        // Retrieving the URL for the image
+          var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
+        // Creating a list item for collapsible list #movies
+          var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
 
-      // Putting the moiveListItem below the previous movies
-        $("#movies").append(movieListItem);
+        // Putting the moiveListItem below the previous movies
+          $("#movies").append(movieListItem);
+        }
+      } else {
+        var nothing = $("<li> <div class='collapsible-header movie center'><span class='accordion-head-text'>Sorry!</span></div><div class= 'collapsible-body'><p>There are no movies that match your discover parameters. Please select new parameters and try again.</p></div></li>")
+        $("#movies").append(nothing);
       }
     // If you click on the add button on a header, don't show/hide collapsible body
     // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
@@ -115,7 +124,7 @@ function discover() {
         e.stopPropagation()
         var movieNum = $(this).attr("firebase-id");
         addMovie(movieNum);
-        console.log(movieNum);
+        // console.log(movieNum);
       });
     });
   } else {
@@ -126,50 +135,61 @@ function discover() {
       method: "GET"
     }).done(function(response) {
       res=response;
-      var actorId = response.results[0].id;  
-      var sort = $("#sort").val();
-      var genre = $("#genre").val();
-      var years = snapSlider.noUiSlider.get();
-      var lowYear = years[0];
-      var highYear = years[1];
-      console.log(actor);
-      console.log(sort);
-      console.log(genre);
-      console.log(lowYear);
-      console.log(highYear);
-    // Creates query URL based on user inputs
-      var movieURL= "https://api.themoviedb.org/3/discover/movie?api_key=ac004416c837056eac779513d15becfb&original_language=en-US&sort_by=" + sort + "&release_date.gte=" + lowYear + "&release_date.lte=" + highYear + "&with_genres=" + genre + "&with_cast=" + actorId + "&page=" + page + "&include_adult=false"
-    // AJAX call to get data from TMDB using query URL  
-      $.ajax({
-        url: movieURL,
-        method: "GET"
-      }).done(function(response) {
-        res=response;
-        console.log(response);
-        console.log(movieURL);
-    // For loop to create collapsible elements (max 20 if the results page is full) and append to the #movies ul
-        for (i=0; i<response.results.length; i++) {  
-          console.log(response.results[i]);
-        // Creating variables to hold response data
-          var title = response.results[i].title;
-          var released = response.results[i].release_date;
-          var plot = response.results[i].overview;
-        // Retrieving the URL for the image
-          var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
-        // Creating a list item for collapsible list #movies
-          var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
-        // Putting the moiveListItem below the previous movies
-          $("#movies").append(movieListItem);
-        }
-      // If you click on the add button on a header, don't show/hide collapsible body
-      // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
-        $('.add-button').on('click', function(e) {
-          e.stopPropagation();
-          var movieNum = $(this).attr("firebase-id");
-          addMovie(movieNum);
-          console.log(movieNum);
+      if (response.results.length !== 0) {
+        var actorId = response.results[0].id;  
+        var sort = $("#sort").val();
+        var genre = $("#genre").val();
+        var years = snapSlider.noUiSlider.get();
+        var lowYear = years[0];
+        var highYear = years[1];
+        // console.log(actor);
+        // console.log(sort);
+        // console.log(genre);
+        // console.log(lowYear);
+        // console.log(highYear);
+      // Creates query URL based on user inputs
+        var movieURL= "https://api.themoviedb.org/3/discover/movie?api_key=ac004416c837056eac779513d15becfb&original_language=en-US&sort_by=" + sort + "&release_date.gte=" + lowYear + "&release_date.lte=" + highYear + "&with_genres=" + genre + "&with_cast=" + actorId + "&page=" + page + "&include_adult=false"
+      // AJAX call to get data from TMDB using query URL  
+        $.ajax({
+          url: movieURL,
+          method: "GET"
+        }).done(function(response) {
+          res=response;
+          // console.log(response);
+          // console.log(movieURL);
+      // For loop to create collapsible elements (max 20 if the results page is full) and append to the #movies ul
+          if (response.results.length !== 0) {  
+            for (i=0; i<response.results.length; i++) {  
+              // console.log(response.results[i]);
+            // Creating variables to hold response data
+              var title = response.results[i].title;
+              var released = response.results[i].release_date;
+              var plot = response.results[i].overview;
+            // Retrieving the URL for the image
+              var imgURL = "https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path;
+            // Creating a list item for collapsible list #movies
+              var movieListItem = $("<li> <div class='collapsible-header movie center' tmdb-id='" + response.results[i].id + "' youtube-search='" + response.results[i].title + " official trailer'><span class='accordion-head-text'>" + response.results[i].title + "</span><a firebase-id='" + response.results[i].id + "' class='add-button btn-floating btn-large waves-effect waves-light red'><i class='material-icons center'>add</i></a></div><div class= 'collapsible-body'><img class='poster col s3 m3 l3' src='https://image.tmdb.org/t/p/w185/" + response.results[i].poster_path + "'><p>" + response.results[i].overview + "</p> <p>Release date: " + response.results[i].release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.results[i].title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>See if this movie is playing near you!</a></div></li>" );
+            // Putting the moiveListItem below the previous movies
+              $("#movies").append(movieListItem);
+            }
+          } else {
+            var nothing = $("<li> <div class='collapsible-header movie center'><span class='accordion-head-text'>Sorry!</span></div><div class= 'collapsible-body'><p>There are no movies that match your discover parameters. Please select new parameters and try again.</p></div></li>")
+            $("#movies").append(nothing);
+          }
+
+        // If you click on the add button on a header, don't show/hide collapsible body
+        // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
+          $('.add-button').on('click', function(e) {
+            e.stopPropagation();
+            var movieNum = $(this).attr("firebase-id");
+            addMovie(movieNum);
+            // console.log(movieNum);
+          });
         });
-      });
+      } else {
+        var nothing = $("<li> <div class='collapsible-header movie center'><span class='accordion-head-text'>Sorry!</span></div><div class= 'collapsible-body'><p>There are no actors that match your search. Please remove the actor or check your spelling and try again.</p></div></li>")
+        $("#movies").append(nothing);
+      }
     });
   }
 }
@@ -241,7 +261,7 @@ $("#movies").on("click", ".collapsible-header", function(){
     url: queryURL,
     method: "GET"
   }).done(function(response) {
-    console.log(response.items[0].id.videoId);
+    // console.log(response.items[0].id.videoId);
     // Insert youtube video in .collapsible-body after .poster
     var youtubeVid = $("<iframe class='dynamic-iframe col s12 m9 l9' width='640' height='360' src='https://www.youtube.com/embed/" + response.items[0].id.videoId + "?enablejsapi=1' frameborder='0' style='border: solid 4px #37474F'></iframe>");
     $(youtubeVid).insertAfter(".poster");    
@@ -267,7 +287,7 @@ $('#profile-info').on('click', ".delete", function(e) {
   Materialize.toast('Removed!', 2000);
   var firebaseMovieNum = $(this).attr("firebase-id");
   deleteMovie(firebaseMovieNum);
-  console.log(firebaseMovieNum);
+  // console.log(firebaseMovieNum);
   setTimeout(function() {
     $('#profile-info').empty();
     getMovieList()} , 0);
