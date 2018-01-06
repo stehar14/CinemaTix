@@ -329,10 +329,24 @@ footer .page-footer {
   #index-banner .section {
     top: 10%;
   }
+  
+  #search-movie,
+  #register-form {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+  
+  .my-card {
+    width: 22vw !important;
+  }
+
+  #discover-results{
+    width: 100vw;
+  }
 }
 
 /* Screen <= 600px */
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 620px) {
   #index-banner .section {
     top: 0;
   }
@@ -345,6 +359,15 @@ footer .page-footer {
 
   #register-form {
     width: 90vw;
+  }
+
+  #search-movie {
+    width: 90vw;
+    margin: auto 5vw;
+  }
+
+  .my-card {
+    width: 85vw !important;
   }
 }
 

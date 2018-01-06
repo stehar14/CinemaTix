@@ -246,7 +246,7 @@ $("#movies").on("click", ".collapsible-header", function(){
   }).done(function(response) {
     console.log(response.items[0].id.videoId);
     // Insert youtube video in .collapsible-body after .poster
-    var youtubeVid = $("<iframe class='dynamic-iframe col s9 m9 l9' width='640' height='360' src='https://www.youtube.com/embed/" + response.items[0].id.videoId + "?enablejsapi=1' frameborder='0' style='border: solid 4px #37474F'></iframe>");
+    var youtubeVid = $("<iframe class='dynamic-iframe col s12 m9 l9' width='640' height='360' src='https://www.youtube.com/embed/" + response.items[0].id.videoId + "?enablejsapi=1' frameborder='0' style='border: solid 4px #37474F'></iframe>");
     $(youtubeVid).insertAfter(".poster");    
   });
 });
