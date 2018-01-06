@@ -1,3 +1,5 @@
+// Materialize JS to initiaize the button-callpse and parallax components
+
 (function($){
   $(function(){
 

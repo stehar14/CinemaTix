@@ -1,3 +1,6 @@
+// CinemaTix
+// Project 1
+
 // On page ready function to initialize selectable dropdowns on discover page
 $(document).ready(function() {
   $('select').material_select();

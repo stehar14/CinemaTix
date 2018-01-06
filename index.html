@@ -1,3 +1,6 @@
+<!-- CinemaTix Site
+      Project 1 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,42 +14,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
 <!-- Navbar -->
   <nav class="" role="navigation">
     <div class="nav-wrapper container">
-      <a href="index.html"> <img class="ourlogo" src="assets/images/logo1.jpg"></a>
+      <a href="index.html"> <img class="our-logo" src="assets/images/logo1.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="searchPage.html">Search for a Movie</a></li>
-        <li><a href="discoverPage.html">Discover Movies</a></li>
-        <li><a href="loginPage.html">Sign In</a></li>
+        <li><a class="white-text" href="profile.html">Profile</a></li>
+        <li><a class="white-text" href="discoverPage.html">Discover Movies</a></li>
+        <li><a class="white-text" href="reg.html">Account</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="searchPage.html">Search for a Movie</a></li>
+        <li><a href="profile.html">Profile</a></li>
         <li><a href="discoverPage.html">Discover Movies</a></li>
-        <li><a href="loginPage.html">Sign In</a></li>
+        <li><a href="reg.html">Account</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -57,9 +42,9 @@
 <!-- Cinematix Logo over theater background -->      
       <div class="container">
         <br><br>
-        <h1 class="titlefont" class="header center teal-text text-lighten-2">CinemaTix</h1>
+        <h1 class="title-font" class="header center teal-text text-lighten-2">Cinema<span id="big-t">T</span>ix</h1>
         <div class="row center">
-          <h5 class="allinone" class="header col s12 light">The All in One Movie Experience</h5>
+          <h5 class="all-in-one" class="header col s12 light">The All in One Movie Experience</h5>
         </div>
         <div class="row center">
         </div>
@@ -76,25 +61,25 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center white-text"><a class="btn btn-floating pulse"><i class="material-icons">search</i></h2></a>
+            <h2 class="center white-text"><a href="discoverPage.html" class="btn btn-floating pulse"><i class="material-icons">search</i></h2></a>
             <h5 class="center white-text">Find Your Movie</h5>
-            <p class="light white-text center">Type in to the search any movie you're looking for, whether it be one that's due out in the near future, an older release, or something that's in theaters now.</p>
+            <p class="light white-text center">Use the Discover page to search for any specific movie you're interested in learning more about or use a multitude of parameters to discover movies you haven't heard of yet.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center white-text"><a class="btn btn-floating pulse"><i class="material-icons">add</i></h2></a>
+            <h2 class="center white-text"><a href="profile.html" class="btn btn-floating pulse"><i class="material-icons">add</i></h2></a>
             <h5 class="center white-text">Add to Your Custom List</h5>
-            <p class="light white-text center">Create a custom list of all the movies you're interested in or that you just want to keep on your radar. Stay up to date with new information and new trailers or interviews that may have just came out.</p>
+            <p class="light white-text center">Create a custom list of all the movies you're interested in or that you just want to keep on your radar. Stay up to date with new information and new trailers.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center white-text"><a class="btn btn-floating pulse"><i class="material-icons">attach_money</i></h2></a>
+            <h2 class="center white-text"><a href="discoverPage.html" class="btn btn-floating pulse"><i class="material-icons">attach_money</i></h2></a>
             <h5 class="center white-text">Purchase Tickets</h5>
-            <p class="light white-text center">Easily purchase tickets to your closest theater, or even your theater of choice. </p>
+            <p class="light white-text center">Easily determine whether there are tickets available for any movie you search for or add to your list. Purchase tickets for any movie available for your theater of choice. </p>
           </div>
         </div>
       </div>
@@ -118,12 +103,12 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <p class="left-align light white-text">Here at CinemaTix, we're devoted to providing you with the easiest, most aesthetically pleasing way of keeping track of what movies you're most interested in. Easily make a list of any cinematic you've seen before, or something that is coming out in the near future and view a quick snippet of relative interviews or trailers associated with it. If you feel so inclined, you can also purchase tickets directly from our site to a movie theater close to you!</p>
+          <p class="left-align light white-text">Here at CinemaTix, we're devoted to providing you with the easiest, most aesthetically pleasing way of keeping track of what movies you're most interested in. Easily make a list of any movie you've seen in the past, have been dying to see, or is coming out in the near future. You can even discover movies based on genre, release date, popularity, or by actor/actress. While browsing movies or after adding them to your list, review information about any movie including trailers, plot, and release dates. If you feel so inclined, you can also purchase tickets directly from our site to a movie theater close to you!</p>
         </div>
       </div>
     </div>
   </div>
-<!-- Thirs Image -->
+<!-- Third Image -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -138,11 +123,14 @@
   <footer class="page-footer black">
     <div class="container">
       <div class="row">
-        <div class="col l12 l12">
-          <h6 class="broughttoyou" class="white-text center">Brought to you by:</h6>
-          <h5 class="thetitle" class="white-text center">The</h5>
+        <div class="col s12 s12">
+          <h6 class="brought-to-you" class="white-text center">Brought to you by:</h6>
+          <h5 class="the-title" class="white-text center">The</h5>
           <h4 class="boolean" class="white-text center">Boolean Brothers</h4>
         </div>     
+        <div class="col s12" id="footer-logo">
+          <img src="assets/images/bblogo.png" height=126px width=153px>
+        </div>
       </div>
     </div>
     <div class="container">

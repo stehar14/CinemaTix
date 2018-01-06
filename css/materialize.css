@@ -1,3 +1,4 @@
+/* Materialize CSS library */
 
 .materialize-red {
   background-color: #e51c23 !important;
@@ -3540,7 +3541,7 @@ nav ul a span.badge {
 }
 
 .row .col.offset-s3 {
-  margin-left: 25%;
+  
 }
 
 .row .col.pull-s3 {
@@ -5066,7 +5067,7 @@ small {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #ee6e73;
+  color: rgba(0,0,0,1) !important;
 }
 
 .tabs .tab.disabled a,

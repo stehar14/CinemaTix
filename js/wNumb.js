@@ -1,3 +1,6 @@
+// wNumb
+// Formatting library used to format slider numbers on discover form
+
 (function (factory) {
 
     if ( typeof define === 'function' && define.amd ) {

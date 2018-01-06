@@ -1,4 +1,5 @@
 /*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
+/* Lightweight JS range slider used for slider on discover form */
 
 (function (factory) {
 

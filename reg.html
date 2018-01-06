@@ -6,14 +6,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>CinemaTix Profile</title>
+  <title>CinemaTix Account</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>  
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
   <!-- Firebase -->
@@ -22,7 +22,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
 </head>
 
-<body id="profile-image-background">
+<body>
   <!-- Navbar -->
   <nav class="" role="navigation">
     <div class="nav-wrapper container">
@@ -40,26 +40,51 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <!-- profile image section -->
-  <div id="username-display" class="black col s12">Profile Name Here</div>
-  <div id="profile-information">
-    <div id="email-used">User Email:</div>
-    <div id="date-joined">Join Date:</div>
-  </div>
-  <div class="col s12">
-    <ul id="profile-boxes" class="collapsible popout" data-collapsible="accordion">
-      <li>
-        <div id="my-movies" class="collapsible-header">Click here to view your Current Movie List</div>
-        <div class="black collapsible-body">
-          <div class="row">
-            <span id="profile-info"></span>
-          </div>
+<!-- Main content -->
+  <div id="justice">
+    <div class="row">
+      <div id="modal2" class="modal col s12 m4 offset-m8">
+        <div class="modal-content">
+          <h4>Oops!</h4>
+          <p id="error-msg">You need to enter in a valid search term!</p>
         </div>
-      </li>
-    </ul>
-  </div>    
+        <div class="modal-footer">
+          <a id="modal-close" class="modal-action modal-close waves-effect waves-red btn-flat">Okay</a>
+        </div>
+      </div>
+      <div id="register-form" class="col s12 m4 offset-m4">
+        
+        <h3 id="reg-text" class="white-text">Register</h3>
+        <div class="input-field col s12">
+          <label>Display Name</label>
+          <input class="white-text" placeholder="JamesBond007" id="display-name" type="text">
+        </div>
+        <div class="input-field col s12">
+          <label>Email</label>
+          <input class="white-text" placeholder="james.bond@mi6.org" id="email" type="email">
+        </div>
+        <div class="input-field col s12">
+          <label>Password</label>
+          <input class="white-text" placeholder="******" id="password" type="password">
+        </div>
+    <!-- Submit button -->
+        <button id="register" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Register
+          <i class="material-icons right">send</i>
+        </button>
+        <button id="sign-in" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Sign In
+          <i class="material-icons right">send</i>
+        </button>
+        <button id="sign-out" class="btn waves-effect waves-light col s6 offset-s3" type="submit">Sign Out
+          <i class="material-icons right">send</i>
+        </button>
+      </div>  
+    </div>
+    <div class="height1">
+      <img src="assets/images/bblogo.png" width=167px>
+    </div>
+  </div>
 
-   <!-- Scripts -->
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
@@ -67,6 +92,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
   <script src="js/init.js"></script>
   <script type="text/javascript" src="js/userData.js"></script>
-
 </body>
- </html>
+</html>
