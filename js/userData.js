@@ -237,6 +237,7 @@ function getUsername()
   {
     console.log(snapshot.val().username);
     $("#username-display").html(snapshot.val().username);
+    $("#display-name").attr("placeholder", snapshot.val().username);
   });
 }
 
@@ -246,4 +247,5 @@ function getEmail()
 	var email = firebase.auth().currentUser.email;
 	console.log(email);
 	$("#email-used").html(email);
+  $("#email").attr("placeholder", email);
 }
