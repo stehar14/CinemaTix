@@ -1,0 +1,21 @@
+div.container-fluid{
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";         */
+    /*filter: alpha(opacity=0);   */
+    /*-moz-opacity: 0.0;           */
+    /*-khtml-opacity: 0.0;         */
+    /*opacity: 0.0;                */
+    /*background: rgba(255,255,255,0);*/
+    background-color: transparent !important;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.card {
+    background-color: rgba(229, 228, 255, 0.4);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 80%;
+
+}
+
