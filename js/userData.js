@@ -210,7 +210,7 @@ function getMovieList()
     // Retrieving the URL for the image
       var imgURL = "https://image.tmdb.org/t/p/w185/" + response.poster_path;
     // Creating a list item for collapsible list #movies
-      var movieCard = $("<div class='col s12 m2'><div class='card'><div class='card-image'><img src='" + imgURL + "'><span class='card-title'>" + title + "</span><a firebase-id='" + response.id + "' class='delete btn-floating halfway-fab waves-effect waves-light red'><i class='material-icons'>cancel</i></a></div><div class='card-content black'><p>Release: " + response.release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>Tickets?</a></div></div></div>");
+      var movieCard = $("<div class='col s12 m2 my-card'><div class='card'><div class='card-image'><img src='" + imgURL + "'><span class='card-title'>" + title + "</span><a firebase-id='" + response.id + "' class='delete btn-floating halfway-fab waves-effect waves-light red'><i class='material-icons'>cancel</i></a></div><div class='card-content black'><p>Release: " + response.release_date + "</p><a class='ticket-link' href ='https://www.atomtickets.com/search?query=" + response.title + "'><img src='./assets/images/atomtix.jpg' height=40px width=40px>Tickets?</a></div></div></div>");
     // Putting the moiveCard behind the previous movies
       $("#profile-info").append(movieCard);
     });  
