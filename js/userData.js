@@ -154,17 +154,31 @@ function createUserData(id, username)
 }
 
 // Function to add movie from discover page to your movie list
-function addMovie(movieId, callback)
+function addMovie(movieId)
 {
+  var alreadyListed = false;
 	thisUserRef = database.ref("users/" + userId);
   var moviesRef = thisUserRef.child("movies");
-  var newMoviesRef = moviesRef.push();
-  id = newMoviesRef.name;
-  newMoviesRef.set({
-      id: movieId
-  });
+  moviesRef.once("value", function(snapshot) {
+    snapshot.forEach(function(childSnapshot){
+      var childKey = childSnapshot.key;
+      var childData = childSnapshot.val().id;
 
-  console.log("Movie added");
+      if (childData == movieId) {
+        alreadyListed = true;
+      }
+    });
+    if (alreadyListed) {
+      Materialize.toast("Already added!", 1000);
+    } else {
+      var newMoviesRef = moviesRef.push();
+      id = newMoviesRef.name;
+      newMoviesRef.set({
+        id: movieId
+      });
+      Materialize.toast("Added!", 1000);
+    }
+  });
 
   thisUserRef.once("value", function(snapshot)
   {
