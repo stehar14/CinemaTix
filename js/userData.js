@@ -154,17 +154,42 @@ function createUserData(id, username)
 }
 
 // Function to add movie from discover page to your movie list
-function addMovie(movieId, callback)
+function addMovie(movieId)
 {
+  var alreadyListed = false;
 	thisUserRef = database.ref("users/" + userId);
-  var moviesRef = thisUserRef.child("movies");
-  var newMoviesRef = moviesRef.push();
-  id = newMoviesRef.name;
-  newMoviesRef.set({
-      id: movieId
-  });
+  var moviesRef = thisUserRef.child("movies/");
 
-  console.log("Movie added");
+  moviesRef.once("value", function(snapshot)
+  {
+    snapshot.forEach(function(childSnapshot)
+    {
+      var childKey = childSnapshot.key;
+      var childData = childSnapshot.val().id;
+
+      if(childData == movieId)
+      {
+        alreadyListed = true;
+      }
+    });
+
+    if(alreadyListed)
+    {
+      Materialize.toast('Already Saved!', 1000);
+      console.log("Movie already listed");
+    }
+    else
+    {
+      var newMoviesRef = moviesRef.push();
+      id = newMoviesRef.name;
+      newMoviesRef.set(
+      {
+          id: movieId
+      });
+      Materialize.toast('Saved!', 1000);
+      console.log("Movie added");
+    }
+  });
 
   thisUserRef.once("value", function(snapshot)
   {
@@ -174,7 +199,7 @@ function addMovie(movieId, callback)
 
 function deleteMovie(movieId) {
   thisUserRef = database.ref("users/" + userId);
-  var moviesRef = thisUserRef.child("movies");
+  var moviesRef = thisUserRef.child("/movies");
   moviesRef.orderByChild('id').equalTo(movieId)
     .once('value').then(function(snapshot) {
         snapshot.forEach(function(childSnapshot) {

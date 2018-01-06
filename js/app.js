@@ -53,7 +53,6 @@ function search() {
     // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
       $('.add-button').on('click', function(e) {
         e.stopPropagation();
-        Materialize.toast('Added!', 2000);
         var movieNum = $(this).attr("firebase-id");
         addMovie(movieNum);
         console.log(movieNum);
@@ -114,7 +113,6 @@ function discover() {
     // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
       $('.add-button').on('click', function(e) {
         e.stopPropagation();
-        Materialize.toast('Added!', 2000);
         var movieNum = $(this).attr("firebase-id");
         addMovie(movieNum);
         console.log(movieNum);
@@ -167,7 +165,6 @@ function discover() {
       // Instead, add the firebase-id (holding the tmdb movie id) to realtime database
         $('.add-button').on('click', function(e) {
           e.stopPropagation();
-          Materialize.toast('Added!', 2000);
           var movieNum = $(this).attr("firebase-id");
           addMovie(movieNum);
           console.log(movieNum);
