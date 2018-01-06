@@ -369,5 +369,9 @@ footer .page-footer {
   .my-card {
     width: 85vw !important;
   }
+
+  #username-display {
+    font-size: 50px !important;
+  }
 }
 
